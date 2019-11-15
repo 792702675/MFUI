@@ -1,0 +1,52 @@
+{
+  "ServerSideTemplatePath": "D:\\Websites\\QCMF.Core\\MFCodes\\Code\\Server",
+  "ClientSideTemplatePath": "D:\\Websites\\QCMF.Core\\MFCodes\\Code\\ManageUI",
+  "OutputDir": "/output",
+  "ClientSideIgnoreFolders": [ ".git", "node_modules", ".vscode" ],
+  "ClientSideIgnoreFiles": [ "debug.log" ],
+  "ServerSideIgnoreFolders": [
+    ".git",
+    ".vs",
+    "packages",
+    "bin",
+    "obj",
+    "output",
+    "Documents",
+    "Document",
+    "Views",
+    "editor.md-master"
+  ],
+  "ServerSideIgnoreFiles": [
+    "Web.Config.txt",
+    "DefaultSettingsCreator.cs.txt",
+    ".roadhogrc.txt",
+    "bianbian.gif",
+    "close.gif",
+    "index.gif",
+    "logodao.gif",
+    "HomeController.cs",
+    "Index.cshtml",
+    "CleanupCodeSetting.cs",
+    "ClientSideCodePackager.cs",
+    "MFFrameworkSetting.cs",
+    "ServerSideCodePackager.cs",
+    "MFFrameworkSetting.json",
+    "ABPMFWebViewPageBase.cs"
+  ],
+  "ServerSideCleanupCodes": [
+    {
+      "Target": "MF.Web\\Web.config",
+      "Source": "${ServerSideTemplatePath}\\MF.Web\\App_Data\\MFTemplates\\Web.Config.txt"
+    },
+    {
+      "Target": "DefaultSettingsCreator.cs",
+      "Source": "${ServerSideTemplatePath}\\MF.Web\\App_Data\\MFTemplates\\DefaultSettingsCreator.cs.txt"
+    }
+  ],
+  "ClientSideCleanupCodes": [
+    {
+      "Target": ".roadhogrc",
+      "Source": "${ServerSideTemplatePath}\\MF.Web\\App_Data\\MFTemplates\\.roadhogrc.txt"
+    }
+  ]
+}

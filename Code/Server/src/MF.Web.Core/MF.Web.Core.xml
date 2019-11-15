@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MF.Web.Core</name>
+    </assembly>
+    <members>
+        <member name="M:MF.Web.Chat.SignalR.ChatHub.#ctor(MF.Chat.IChatMessageManager,Abp.Localization.ILocalizationManager,Castle.Windsor.IWindsorContainer,Abp.RealTime.IOnlineClientManager{MF.Chat.ChatChannel},Abp.Auditing.IClientInfoProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MF.Web.Chat.SignalR.ChatHub"/> class.
+            </summary>
+        </member>
+        <member name="P:MF.Web.Chat.SignalR.SignalRChatCommunicator.Logger">
+            <summary>
+            Reference to the logger.
+            </summary>
+        </member>
+        <member name="T:MF.Controllers.AliyunOssController">
+            <summary>
+            阿里OSS存储库管理  管理人员使用
+            </summary>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.PullData(System.String)">
+            <summary>
+            从oss服务器更新本地数据(一般是初始化本地数据时使用)
+            </summary>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.GetBuckets">
+            <summary>
+            获取存储库列表（List Bucket）
+            </summary>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.CreateBucket(System.String)">
+            <summary>
+            创建存储库（Create Bucket）
+            </summary>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.DeleteBucket(System.String)">
+            <summary>
+            删除存储库（Delete Bucket）
+            </summary>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.GetObjectListOfDirectory(System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            获取目录下的内容
+            </summary>
+            <param name="bucketName"></param>
+            <param name="root">目录</param>
+            <param name="directoryOnly">是否只要目录</param>
+            <param name="sorting">排序</param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.Search(MF.OSS.SearchInput)">
+            <summary>
+            搜索
+            </summary>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.CreateObject(System.String,System.String)">
+            <summary>
+            创建文件 支持批量上传
+            </summary>
+            <param name="BucketName"></param>
+            <param name="Path"></param>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.CreateFolder(MF.OSS.CreateFolderInput)">
+            <summary>
+            创建文件夹
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.GetObject(MF.OSS.ObjectKeyInput)">
+            <summary>
+            获取文件
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.DeleteObject(MF.OSS.ObjectKeyInput)">
+            <summary>
+            删除文件或目录
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.DeleteObjects(MF.OSS.DeleteObjectsInput)">
+            <summary>
+            删除文件 批量
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.Copy(System.String,System.String,System.String,System.String)">
+            <summary>
+            复制 
+            </summary>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.CopyBatch(MF.OSS.BatchToDestination)">
+            <summary>
+            复制 (批量）(递归)
+            </summary>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.Move(System.String,System.String,System.String,System.String)">
+            <summary>
+            移动  
+            </summary>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.MoveBatch(MF.OSS.BatchToDestination)">
+            <summary>
+            移动 (批量）(递归)
+            </summary>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.UpdateTag(MF.OSS.UpdateTagInput)">
+            <summary>
+            更新标签
+            </summary>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.BatchAddTag(MF.OSS.BatchUpdateTagInput)">
+            <summary>
+            加标签 (批量）(递归)
+            </summary>
+        </member>
+        <member name="M:MF.Controllers.AliyunOssController.BatchSubTag(MF.OSS.BatchUpdateTagInput)">
+            <summary>
+            减标签 (批量）(递归)
+            </summary>
+        </member>
+        <member name="P:MF.OSS.GetListObjectInput.Prefix">
+            <summary>
+            本次查询结果的前缀。
+            </summary>
+        </member>
+        <member name="P:MF.OSS.GetListObjectInput.Marker">
+            <summary>
+            标明本次列举文件的起点。
+            </summary>
+        </member>
+        <member name="P:MF.OSS.GetListObjectInput.MaxKeys">
+            <summary>
+            列举文件的最大个数。默认为100，最大值为1000。
+            </summary>
+        </member>
+        <member name="P:MF.OSS.GetListObjectInput.Delimiter">
+            <summary>
+            对文件名称进行分组的一个字符。CommonPrefixes是以delimiter结尾，并有共同前缀的文件集合。
+            </summary>
+        </member>
+        <member name="P:MF.OSS.SearchInput.Root">
+            <summary>
+            搜索目录
+            </summary>
+        </member>
+        <member name="P:MF.OSS.SearchInput.Name">
+            <summary>
+            文件名\文件夹名
+            </summary>
+        </member>
+        <member name="P:MF.OSS.SearchInput.TagNames">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:MF.OSS.SearchInput.ExtensionNames">
+            <summary>
+            扩展名
+            </summary>
+        </member>
+        <member name="P:MF.OSS.SearchInput.Sorting">
+            <summary>
+            排序 Name、ExtensionName、LastModified、Size
+            </summary>
+        </member>
+    </members>
+</doc>

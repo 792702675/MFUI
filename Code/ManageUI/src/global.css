@@ -1,0 +1,36 @@
+html,
+body,
+#root {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+.ant-upload-list-item-thumbnail {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.ant-upload-list-item-thumbnail img {
+	width: 50px !important;
+	height: auto !important;
+	max-height: 50px !important;
+	/* margin-top: 10px */
+}
+/* @keyframes mymove{ */
+/* 0%{backgroundImage:url("http://430schoolbatesourcev1.oss-cn-hangzhou.aliyuncs.com/收藏品/人形/CSB003GAA.png")}
+50%{backgroundImage:url("http://430schoolbatesourcev1.oss-cn-hangzhou.aliyuncs.com/收藏品/人形/CSB003GAB.png")}
+100%{backgroundImage:url("http://430schoolbatesourcev1.oss-cn-hangzhou.aliyuncs.com/收藏品/人形/CSB003GAG.png")} */
+/* 0%{background:red}
+100%{background:blue}
+} */
+p {
+	margin-bottom: 1em;
+}
+
+.answerSheet .answerSheetTop,
+.answerSheet .ant-radio,
+.answerSheet .ant-checkbox {
+	z-index: 999;
+}

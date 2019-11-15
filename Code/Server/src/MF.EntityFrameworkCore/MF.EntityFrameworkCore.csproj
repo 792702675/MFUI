@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <RootNamespace>MF</RootNamespace>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations\20180726102624_Upgrade_ABP_380.cs" />
+    <Compile Remove="Migrations\20180927062408_test.cs" />
+    <Compile Remove="Migrations\20190111071724_Upgraded_To_Abp_v4_1_0.cs" />
+    <Compile Remove="Migrations\20190520063951_Dev4.cs" />
+    <Compile Remove="Migrations\20190520063951_Dev4.Designer.cs" />
+    <Compile Remove="Migrations\20190603023857_Dev11.cs" />
+    <Compile Remove="Migrations\20190603023857_Dev11.Designer.cs" />
+    <Compile Remove="Migrations\20190603024843_Dev11.cs" />
+    <Compile Remove="Migrations\20190603024843_Dev11.Designer.cs" />
+    <Compile Remove="Migrations\20190603063441_Dev13.cs" />
+    <Compile Remove="Migrations\20190603063441_Dev13.Designer.cs" />
+    <Compile Remove="Migrations\20190603072726_Dev14.cs" />
+    <Compile Remove="Migrations\20190603072726_Dev14.Designer.cs" />
+    <Compile Remove="Migrations\20190604080113_Dev15.cs" />
+    <Compile Remove="Migrations\20190604080113_Dev15.Designer.cs" />
+    <Compile Remove="Migrations\20190606015248_Dev19.cs" />
+    <Compile Remove="Migrations\20190606015248_Dev19.Designer.cs" />
+    <Compile Remove="Migrations\20190606025443_Dev20.cs" />
+    <Compile Remove="Migrations\20190606025443_Dev20.Designer.cs" />
+    <Compile Remove="Migrations\20190606030313_Dev20.cs" />
+    <Compile Remove="Migrations\20190606030313_Dev20.Designer.cs" />
+    <Compile Remove="Migrations\20190606065146_Dev20.cs" />
+    <Compile Remove="Migrations\20190606072100_Dev20.cs" />
+    <Compile Remove="Migrations\20190610055251_Dev24.cs" />
+    <Compile Remove="Migrations\20190617072436_Dev29.cs" />
+    <Compile Remove="Migrations\20190617072436_Dev29.Designer.cs" />
+    <Compile Remove="Migrations\20190624081633_Dev43.cs" />
+    <Compile Remove="Migrations\20190731055844_Dev59.cs" />
+    <Compile Remove="Migrations\20190731055844_Dev59.Designer.cs" />
+    <Compile Remove="Migrations\20190731093202_Dev60.cs" />
+    <Compile Remove="Migrations\20190731093202_Dev60.Designer.cs" />
+    <Compile Remove="Migrations\20190805033723_Dev63.cs" />
+    <Compile Remove="Migrations\20190805033723_Dev63.Designer.cs" />
+    <Compile Remove="Migrations\20190807061013_Dev67.cs" />
+    <Compile Remove="Migrations\20190807061013_Dev67.Designer.cs" />
+    <Compile Remove="Migrations\20190829024848_Dev78.cs" />
+    <Compile Remove="Migrations\20190829024848_Dev78.Designer.cs" />
+    <Compile Remove="Migrations\20190829025456_Dev78.cs" />
+    <Compile Remove="Migrations\20190829025456_Dev78.Designer.cs" />
+    <Compile Remove="Migrations\20190829025531_Dev78.cs" />
+    <Compile Remove="Migrations\20190829025531_Dev78.Designer.cs" />
+    <Compile Remove="Migrations\20190829025654_Dev78.cs" />
+    <Compile Remove="Migrations\20190829025654_Dev78.Designer.cs" />
+    <Compile Remove="Migrations\20190829090203_Dev79.cs" />
+    <Compile Remove="Migrations\20190829090203_Dev79.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.ZeroCore.EntityFrameworkCore" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MF.Core\MF.Core.csproj" />
+  </ItemGroup>
+</Project>

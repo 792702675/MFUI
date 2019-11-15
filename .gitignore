@@ -1,0 +1,11 @@
+################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/Code/Server/src/QC.MF.Web.Host/App_Data/Logs/Logs.txt
+/Code/Server/src/MF.Web.Host/App_Data/Logs/Logs.txt
+/Code/Server/src/MF.Web.Host/wwwroot/Admin
+/Code/Server/src/MF.Web.Host/App_Data/Logs/Logs.txt.1
+/Code/Server/src/MF.Web.Host/Temp/Downloads
+/Code/Server/src/MF.Web.Host/App_Data/Logs
+/Code/Server/src/MF.Web.Host/Lucene

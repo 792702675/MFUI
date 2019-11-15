@@ -1,0 +1,29 @@
+{
+  //服务路径
+
+  "WopiPath": "/wopi/",
+
+  //文件路径
+
+  "FilesRequestPath": "files/",
+
+  //文件夹
+
+  "FoldersRequestPath": "folders/",
+
+  //内容路径
+
+  "ContentsRequestPath": "/contents",
+
+  //子路径
+
+  "ChildrenRequestPath": "/children",
+
+  //本地物理路径,为空时，默认当前upload文件，如 C:\
+
+  "LocalStoragePath": "",
+
+  //面包屑名称
+
+  "BreadcrumbBrandName": ""
+}

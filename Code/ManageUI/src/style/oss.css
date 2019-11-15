@@ -1,0 +1,86 @@
+.rightclickbox{
+    border:1px solid #ccc;
+    border-radius: 5px;
+    /* background: #fff; */
+    background: #eee;
+    background: -webkit-linear-gradient(to bottom, #fff 0%, #e5e5e5 100px, #e5e5e5 100%);
+    background: linear-gradient(to bottom, #fff 0%, #e5e5e5 100px, #e5e5e5 100%);
+    border-radius: 3px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+}
+.rightclickbox div{
+    width:100%;
+    height:30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    padding-left:20px;
+    cursor: pointer;
+}
+.rightclickbox div:hover{
+    background: #decaa5
+}
+.cardcontent{
+    width:100%;
+    height:90px;
+    display: flex;
+    flex-direction: column;
+}
+.cardtop{
+    flex:3;
+    display: flex;
+}
+.cardtitle{
+    overflow: hidden;
+    color: rgba(0,0,0,0.85);
+    font-weight: 800;
+    font-size: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.cardbottom{
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    flex:8;
+}
+.cardimg{
+    width:60px;
+    height:60px;
+    line-height: 60px;
+    margin:0px 10px;
+    text-align: center
+}
+.cardsub{
+    flex:1;
+    /* background: pink; */
+    display: flex;
+    flex-direction: row;
+}
+.cardname{
+    flex:2;
+    /* background: palegoldenrod */
+}
+.cardtags{
+    flex:1;
+    /* background: orchid; */
+    width:90%;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left:10px;
+}
+.muluname{
+    font-size:16px;
+    /* font-weight: 500 */
+    
+}
+.filenamestyle{
+    font-size: 18;
+    font-weight: 500;
+    width:80%;
+    height:25px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}

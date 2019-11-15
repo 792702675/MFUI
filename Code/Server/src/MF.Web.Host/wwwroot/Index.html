@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/layer/3.0.3/layer.min.js"></script>
+    <style>
+        html, body, ul, div, span, p, input {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .headbox {
+            width: 100%;
+            height: 70%;
+        }
+
+            .headbox img {
+                width: 100%;
+                height: 100%;
+            }
+
+        .footbox {
+            width: 100%;
+            height: 30%;
+            background: #f3f5f9;
+            text-align: center;
+        }
+
+        .foot-button {
+            width: 10%;
+            height: 20%;
+            background: #5d7dc3;
+            font-size: 1vw;
+            color: #fff;
+            border: none;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+            margin-top: 10px;
+            box-shadow: 0 10px 20px #a0b2db;
+            cursor: pointer;
+            margin-right: 2.45%;
+            outline: none
+        }
+
+        .showbox {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        .zhezhao {
+            width: 100%;
+            height: 100%;
+            background: #ccc;
+            position: absolute;
+            left: 0;
+            top: 0;
+            -ms-opacity: 0.5;
+            opacity: 0.5;
+        }
+
+        .downbox {
+            width: 35%;
+            height: 350px;
+            background: #fff;
+            position: fixed;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            -ms-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        .downhead {
+            width: 100%;
+            height: 70px;
+            -ms-border-radius: 10px 10px 0 0;
+            border-radius: 10px 10px 0 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .headfont {
+            width: 30%;
+            height: 100%;
+            float: left;
+            font-size: 0.95vw;
+            color: #fff;
+            background: #5d7dc3;
+            text-align: center;
+            line-height: 70px;
+            -ms-border-radius: 10px 0 0 0;
+            border-radius: 10px 0 0 0;
+        }
+
+        .headwit {
+            width: 70%;
+            height: 100%;
+            -ms-border-radius: 0 10px 0 0;
+            border-radius: 0 10px 0 0;
+            float: left;
+            background: url(/Images/bianbian.gif) no-repeat left #fff;
+        }
+
+        .close {
+            width: 40px;
+            height: 50%;
+            float: right;
+            margin-right: 5%;
+            margin-top: 17px;
+            cursor: pointer;
+        }
+
+            .close img {
+                width: 100%;
+                height: 100%;
+            }
+
+        .shubox {
+            width: 100%;
+            height: 100%;
+        }
+
+        .quebox {
+            width: 100%;
+            height: 100%;
+        }
+
+        .bodybox {
+            width: 100%;
+            height: 150px;
+            border-bottom: 1px solid #f0f0f0;
+            text-align: center;
+            line-height: 150px;
+        }
+
+        .xiangmu {
+            font-size: 1vw;
+            color: #c7cdd5;
+            letter-spacing: 2px;
+            margin-right: 4%;
+        }
+
+        #name {
+            width: 50%;
+            height: 25%;
+            border: 1px solid #c7cdd5;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+            padding: 0 1vw;
+        }
+
+        #queren {
+            width: 17%;
+            height: 30%;
+            background: #5d7dc3;
+            font-size: 1vw;
+            color: #fff;
+            border: none;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+            box-shadow: 0 10px 20px #a0b2db;
+            cursor: pointer;
+            margin-left: 10%;
+            outline: none
+        }
+
+        #quxiao {
+            width: 17%;
+            height: 30%;
+            background: #f0f1f1;
+            font-size: 1vw;
+            color: #9ca1a6;
+            border: none;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+            box-shadow: 0 10px 20px #e4e4e4;
+            cursor: pointer;
+            margin-left: 10%;
+            outline: none
+        }
+
+        input, button, select, textarea {
+            outline: none;
+        }
+
+            input::-webkit-input-placeholder {
+                color: #c7cdd5;
+                font-size: 12px;
+            }
+
+            input::-moz-placeholder {
+                color: #c7cdd5;
+                font-size: 12px;
+            }
+
+            input::-ms-input-placeholder {
+                color: #c7cdd5;
+                font-size: 12px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="headbox"><img src="/Images/index.gif" /></div>
+    <div class="footbox">
+        <input type="button" class="foot-button" id="butsub" value="点击下载" />
+        <input type="button" class="foot-button" id="showdemo" value="查看demo" onclick="showDemo()" />
+        <!--<input type="button" class="foot-button" id="showReadme" value="查看使用说明" onclick="showReadme()" />-->
+    </div>
+    <div class="showbox">
+        <div class="zhezhao"></div>
+        <div class="downbox">
+            <header class="downhead">
+                <div class="headfont">下载模板</div>
+                <div class="headwit">
+                    <div class="close"><img src="/Images/close.gif" /></div>
+                </div>
+            </header>
+            <div class="bodybox">
+                <div class="shubox"><span class="xiangmu">项目名称</span><input type="text" id="name" placeholder="请输入项目名称" /></div>
+                <div class="quebox">
+                    <input type="button" value="确认下载" id="queren" onclick="download(this)" />
+                    <input type="button" value="取消" id="quxiao" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Scripts/index.js"></script>
+    <script>
+        function download(obj) {
+            var name = $("#name").val();
+            if (!name.length) {
+                layer.tips('请输入项目名称', $("#name"), { tips: [1, '#0FA6D8'] });
+                return;
+            }
+            var nameCheckReg = /[^a-zA-Z_]/;
+            if (nameCheckReg.test(name)) {
+                layer.tips('项目名称只能包含英文字母和下划线', $("#name"), { tips: [1, '#0FA6D8'] });
+                return;
+            }
+            $(obj).attr('disabled', "true");
+            var index = layer.load(2, { shade: [0.5, '#ccc'] });
+            $.ajax({
+                url: "/Home/DownloadCode" + "?name=" + name,
+                success: function (result) {
+                    $(obj).removeAttr("disabled");
+                    layer.close(index);
+                    var showbox = document.getElementsByClassName('showbox')[0];
+                    showbox.style.display = 'none';
+
+                    window.location = "/Home/Download" + "?token=" + result.result;
+
+                }
+            });
+        }
+
+        function showDemo() {
+            window.open("/admin/index.html");
+        }
+
+        function showReadme() {
+            window.open("/document");
+        }
+    </script>
+</body>
+
+</html>

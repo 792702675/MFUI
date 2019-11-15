@@ -1,0 +1,74 @@
+.biaojibox{
+    height:400px;
+}
+.videobox{
+    width:640px;
+    background: #ccc;
+    float:left;
+    height:400px;
+    position: relative;
+}
+.biaobox{
+    width:400px;
+    height:400px;
+    float:left;
+    margin-left:200px
+}
+.biaobox2{
+    width:400px;
+    height:400px;
+    position: absolute;
+    right:100px;
+    top:0px;
+    /* float:right; */
+    /* margin-right:200px */
+}
+.biaoitembox{
+    height:310px;
+    overflow: auto;
+}
+/* .biaoitembox::-webkit-scrollbar
+{
+    width: 5px;
+}
+.biaoitembox::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+.biaoitembox::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+         -webkit-box-shadow: inset 0 0 5px red;
+        background: #535353;
+    } */
+
+
+
+
+
+    .markbox{
+        width:610px;
+        height:3px;
+        position: absolute;
+        /* background: red; */
+        left:15px;
+        bottom:12px;
+    }
+    .markline{
+        width:610px;
+        height:3px;
+        opacity: 0;
+        position: absolute;
+        left:0px;
+        bottom:0px;
+    }
+    .markele{
+        width:10px;
+        height:10px;
+        /* background: yellow; */
+        border-radius: 50%;
+        position: absolute;
+        bottom:2px;
+        z-index: 10;
+    }

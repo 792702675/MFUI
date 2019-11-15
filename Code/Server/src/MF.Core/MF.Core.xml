@@ -1,0 +1,706 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MF.Core</name>
+    </assembly>
+    <members>
+        <member name="P:MF.AppEditions.AppEdition.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.AppEdition.AboutUrl">
+            <summary>
+            关于
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.AppEdition.InstallationPackage">
+            <summary>
+            安装包
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.AppEdition.IsMandatoryUpdate">
+            <summary>
+            是否强制更新
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.AppEdition.IsActive">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.AppEdition.Describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.IOSAppEdition.ItunesUrl">
+            <summary>
+            Itunes连接
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.AppStartPage.Platform">
+            <summary>
+            平台 Android = 1, IOS = 2 
+            （创建默认值时，该项可空）
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.AppStartPage.Width_Px">
+            <summary>
+            分辨率 宽
+            （创建默认值时，该项可空）
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.AppStartPage.High_Px">
+            <summary>
+            分辨率 高
+            （创建默认值时，该项可空）
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.AppStartPage.Url">
+            <summary>
+            图片路径
+            </summary>
+        </member>
+        <member name="T:MF.AppVersionHelper">
+            <summary>
+            Central point for application version.
+            </summary>
+        </member>
+        <member name="F:MF.AppVersionHelper.Version">
+            <summary>
+            Gets current version of the application.
+            It's also shown in the web page.
+            </summary>
+        </member>
+        <member name="P:MF.AppVersionHelper.ReleaseDate">
+            <summary>
+            Gets release (last build) date of the application.
+            It's shown in the web page.
+            </summary>
+        </member>
+        <member name="F:MF.Authorization.PermissionNames.Pages_Administration_OrganizationUnits">
+            <summary>
+            管理组织机构权限
+            </summary>
+        </member>
+        <member name="F:MF.Authorization.PermissionNames.Pages_Administration_OrganizationUnits_ManageOrganizationTree">
+            <summary>
+            管理组织机构树权限
+            </summary>
+        </member>
+        <member name="F:MF.Authorization.PermissionNames.Pages_Administration_OrganizationUnits_ManageMembers">
+            <summary>
+            管理组织机构内成员
+            </summary>
+        </member>
+        <member name="F:MF.Authorization.PermissionNames.Pages_Administration_HangfireDashboard">
+            <summary>
+            hangfire后台面板
+            </summary>
+        </member>
+        <member name="F:MF.Authorization.PermissionNames.Pages_Administration_Menus">
+            <summary>
+            管理菜单权限
+            </summary>
+        </member>
+        <member name="F:MF.Authorization.PermissionNames.Pages_Administration_Settings">
+            <summary>
+            管理设置权限
+            </summary>
+        </member>
+        <member name="F:MF.Authorization.PermissionNames.Pages_Administration_AppStartPage">
+            <summary>
+            管理App启动页权限
+            </summary>
+        </member>
+        <member name="F:MF.Authorization.PermissionNames.Pages_Administration_AppEdition">
+            <summary>
+            App版本控制权限
+            </summary>
+        </member>
+        <member name="F:MF.Authorization.PermissionNames.Pages_DemoMange">
+            <summary>
+            DemoMange
+            </summary>
+        </member>
+        <member name="F:MF.Authorization.PermissionNames.Pages_DemoMangeCreate">
+            <summary>
+            DemoMange
+            </summary>
+        </member>
+        <member name="F:MF.Authorization.PermissionNames.Pages_DemoMangeDelete">
+            <summary>
+            DemoMange
+            </summary>
+        </member>
+        <member name="F:MF.Authorization.PermissionNames.Pages_DemoMangeUpdate">
+            <summary>
+            DemoMange
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.Users.UserRegistrationManager.RegisterAsync(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            通过手机号注册
+            </summary>
+            <param name="name"></param>
+            <param name="surname"></param>
+            <param name="phoneNumber"></param>
+            <param name="userName"></param>
+            <param name="plainPassword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Captcha.CaptchaManager.CheckCaptcha(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:MF.Captcha.CaptchaManager.GetCaptchaImage(System.Int32,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:MF.Captcha.CodeMaker.RandomTakeItem``1(System.Collections.Generic.List{``0},System.Int32)">
+            <summary>
+            随机取列表中的Item
+            </summary>
+        </member>
+        <member name="M:MF.Captcha.ICaptchaManager.CheckCaptcha(System.String)">
+            <summary>
+             验证验证码
+            </summary>
+            <param name="inputCaptcha"></param>
+        </member>
+        <member name="M:MF.Captcha.ICaptchaManager.GetCaptchaImage(System.Int32,System.Int32)">
+            <summary>
+            获取验证码图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MF.Captcha.ValidateImageBuilderOne.MaxLength">
+            <summary>
+            验证码的最大长度
+            </summary>
+        </member>
+        <member name="P:MF.Captcha.ValidateImageBuilderOne.MinLength">
+            <summary>
+            验证码的最小长度
+            </summary>
+        </member>
+        <member name="M:MF.Captcha.ValidateImageBuilderOne.CreateValidateCode(System.Int32)">
+            <summary>
+            生成验证码
+            </summary>
+            <param name="length">指定验证码的长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Captcha.ValidateImageBuilderOne.CreateImage(System.String)">
+            <summary>
+            创建验证码的图片
+            </summary>
+            <param name="validateCode">验证码</param>
+        </member>
+        <member name="M:MF.Captcha.ValidateImageBuilderOne.GetImageWidth(System.Int32)">
+            <summary>
+            得到验证码图片的长度
+            </summary>
+            <param name="validateNumLength">验证码的长度</param>
+            <returns></returns>
+        </member>
+        <member name="F:MF.Captcha.ValidateImageBuilderThree.PI2">
+            <summary>
+            产生波形滤镜效果
+            </summary>
+        </member>
+        <member name="M:MF.Captcha.ValidateImageBuilderTwo.CreateImage(System.String)">
+            <summary>
+            创建随机码图片
+            </summary>
+            <param name="randomcode">随机码</param>
+        </member>
+        <member name="M:MF.Commons.ICanDelete.CanDelete">
+            <summary>
+            判断是否可以被删除
+            </summary>
+        </member>
+        <member name="M:MF.Commons.ICheckDelete.CheckDelete">
+            <summary>
+            判断是否可以被删除
+            </summary>
+        </member>
+        <member name="T:MF.Configuration.AppSettingNames.Push">
+            <summary>
+            推送
+            </summary>
+        </member>
+        <member name="T:MF.Configuration.AppSettingNames.Push.JPush">
+            <summary>
+            极光
+            </summary>
+        </member>
+        <member name="T:MF.Configuration.AppSettingNames.Push.Getui">
+            <summary>
+            个推
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Demo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Demo.LongText">
+            <summary>
+            介绍
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Demo.Group">
+            <summary>
+            组
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Demo.IsActivate">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Demo.Sort">
+            <summary>
+            顺序
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Demo.Weight">
+            <summary>
+            权
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Demo.PublishTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Demo.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="T:MF.Demos.FileSettingDemo">
+            <summary>
+            设置
+            </summary>
+        </member>
+        <member name="P:MF.Demos.FileSettingDemo.FileSize">
+            <summary>
+            文件大小限制
+            </summary>
+        </member>
+        <member name="P:MF.Demos.FileSettingDemo.FileExtension">
+            <summary>
+            文件格式限制
+            </summary>
+        </member>
+        <member name="T:MF.Demos.Location">
+            <summary>
+            位置信息
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Location.Longitude">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Location.Latitude">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="M:MF.EncryptExtensions.EncryptQueryString(System.String)">
+            <summary>
+            加密算法
+            </summary>
+            <param name="queryString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.EncryptExtensions.DecryptQueryString(System.String)">
+            <summary>
+            解密算法
+            </summary>
+            <param name="queryString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.EncryptExtensions.RsaEncrypt(System.String,System.String)">
+            <summary>
+            RSA 加密
+            </summary>
+            <param name="publickey"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.EncryptExtensions.RsaDecrypt(System.String,System.String)">
+            <summary>
+            RSA解密
+            </summary>
+            <param name="privatekey"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.EncryptExtensions.Md5Encoding(System.String)">
+            <summary>
+            MD5 加密字符串
+            </summary>
+            <param name="rawPass">源字符串</param>
+            <returns>加密后字符串</returns>
+        </member>
+        <member name="T:MF.Geetests.GeetestLib">
+            <summary>
+            GeetestLib 极验验证C# SDK基本库
+            </summary>
+        </member>
+        <member name="F:MF.Geetests.GeetestLib.version">
+            <summary>
+            SDK版本号
+            </summary>
+        </member>
+        <member name="F:MF.Geetests.GeetestLib.sdkLang">
+            <summary>
+            SDK开发语言
+            </summary>
+        </member>
+        <member name="F:MF.Geetests.GeetestLib.apiUrl">
+            <summary>
+            极验验证API URL
+            </summary>
+        </member>
+        <member name="F:MF.Geetests.GeetestLib.registerUrl">
+            <summary>
+            register url
+            </summary>
+        </member>
+        <member name="F:MF.Geetests.GeetestLib.validateUrl">
+            <summary>
+            validate url
+            </summary>
+        </member>
+        <member name="F:MF.Geetests.GeetestLib.gtServerStatusSessionKey">
+            <summary>
+            极验验证API服务状态Session Key
+            </summary>
+        </member>
+        <member name="F:MF.Geetests.GeetestLib.fnGeetestChallenge">
+            <summary>
+            极验验证二次验证表单数据 Chllenge
+            </summary>
+        </member>
+        <member name="F:MF.Geetests.GeetestLib.fnGeetestValidate">
+            <summary>
+            极验验证二次验证表单数据 Validate
+            </summary>
+        </member>
+        <member name="F:MF.Geetests.GeetestLib.fnGeetestSeccode">
+            <summary>
+            极验验证二次验证表单数据 Seccode
+            </summary>
+        </member>
+        <member name="F:MF.Geetests.GeetestLib.successResult">
+            <summary>
+            验证成功结果字符串
+            </summary>
+        </member>
+        <member name="F:MF.Geetests.GeetestLib.failResult">
+            <summary>
+            证结失败验果字符串
+            </summary>
+        </member>
+        <member name="F:MF.Geetests.GeetestLib.forbiddenResult">
+            <summary>
+            判定为机器人结果字符串
+            </summary>
+        </member>
+        <member name="M:MF.Geetests.GeetestLib.#ctor(System.String,System.String)">
+            <summary>
+            GeetestLib构造函数
+            </summary>
+            <param name="publicKey">极验验证公钥</param>
+            <param name="privateKey">极验验证私钥</param>
+        </member>
+        <member name="M:MF.Geetests.GeetestLib.preProcess(System.String,System.String,System.String)">
+            <summary>
+            验证初始化预处理
+            </summary>
+            <returns>初始化结果</returns>
+        </member>
+        <member name="M:MF.Geetests.GeetestLib.getFailPreProcessRes">
+            <summary>
+            预处理失败后的返回格式串
+            </summary>
+        </member>
+        <member name="M:MF.Geetests.GeetestLib.getSuccessPreProcessRes(System.String)">
+            <summary>
+            预处理成功后的标准串
+            </summary>
+        </member>
+        <member name="M:MF.Geetests.GeetestLib.failbackValidateRequest(System.String,System.String,System.String)">
+            <summary>
+            failback模式的验证方式
+            </summary>
+            <param name="challenge">failback模式下用于与validate一起解码答案， 判断验证是否正确</param>
+            <param name="validate">failback模式下用于与challenge一起解码答案， 判断验证是否正确</param>
+            <param name="seccode">failback模式下，其实是个没用的参数</param>
+            <returns>验证结果</returns>
+        </member>
+        <member name="M:MF.Geetests.GeetestLib.enhencedValidateRequest(System.String,System.String,System.String)">
+            <summary>
+            向gt-server进行二次验证
+            </summary>
+            <param name="challenge">本次验证会话的唯一标识</param>
+            <param name="validate">拖动完成后server端返回的验证结果标识字符串</param>
+            <param name="seccode">验证结果的校验码，如果gt-server返回的不与这个值相等则表明验证失败</param>
+            <returns>二次验证结果</returns>
+        </member>
+        <member name="T:MF.HttpRequester.HttpMethod">
+            <summary>
+            HTTP请求方式枚举
+            </summary>
+        </member>
+        <member name="M:MF.HttpRequester.Request(System.String,MF.HttpRequester.RequestOptions,System.String,System.Int32)">
+            <summary>
+            建立HTTP请求，返回请求结果
+            </summary>
+            <param name="url">请求Url</param>
+            <param name="options">请求方式</param>
+            <param name="body">请求参数</param>
+            <param name="timeout">请求超时时间</param>
+            <returns>返回请求结果</returns>
+        </member>
+        <member name="T:MF.Menus.Menu">
+            <summary>
+            菜单项
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Menu.ParentId">
+            <summary>
+            上级菜单
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Menu.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Menu.Icon">
+            <summary>
+            图标名称
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Menu.IsLeaf">
+            <summary>
+            是否叶子节点
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Menu.Order">
+            <summary>
+            菜单顺序
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Menu.IsEnabled">
+            <summary>
+            菜单是否可用
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Menu.IsVisible">
+            <summary>
+            菜单是否可见
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Menu.RequiredPermissionName">
+            <summary>
+            权限限制
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Menu.RequiresAuthentication">
+            <summary>
+            是否需要登录才可查看菜单
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Menu.Target">
+            <summary>
+            打开方式 "_blank", "_self", "_parent", "_top"或者iframe名字
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Menu.Url">
+            <summary>
+            目标链接
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Menu.IsSystem">
+            <summary>
+            是否系统菜单
+            </summary>
+        </member>
+        <member name="T:MF.Notifications.AppNotificationNames">
+            <summary>
+            Constants for notification names used in this application.
+            </summary>
+        </member>
+        <member name="P:MF.PreviousAndNexts.PreviousAndNext`1.PreviousId">
+            <summary>
+            上一个
+            </summary>
+        </member>
+        <member name="P:MF.PreviousAndNexts.PreviousAndNext`1.PreviousName">
+            <summary>
+            上一个
+            </summary>
+        </member>
+        <member name="P:MF.PreviousAndNexts.PreviousAndNext`1.NextId">
+            <summary>
+            下一个
+            </summary>
+        </member>
+        <member name="P:MF.PreviousAndNexts.PreviousAndNext`1.NextName">
+            <summary>
+            下一个
+            </summary>
+        </member>
+        <member name="M:MF.JPush.JPushService.Push(System.String,MF.JPush.PushParam,System.String[],MF.JPush.PushType)">
+            <summary>
+            推送消息
+            </summary>
+            <param name="alert">弹窗</param>
+            <param name="content">消息内容</param>
+            <param name="extras">参数</param>
+            <param name="targets">目标(istag=true:角色表FID  istag=false:用户表FNumber)</param>
+            <param name="type">推送目标</param>
+        </member>
+        <member name="T:MF.JPush.PushParam">
+            <summary>
+            推送参数
+            </summary>
+        </member>
+        <member name="P:MF.JPush.PushParam.Param">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:MF.JPush.PushParam.Text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="P:MF.JPush.PushParam.Source">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="P:MF.JPush.PushParam.SourceId">
+            <summary>
+            来源Id
+            </summary>
+        </member>
+        <member name="T:MF.JPush.PushType">
+            <summary>
+            推送类型
+            </summary>
+        </member>
+        <member name="F:MF.JPush.PushType.Tag">
+            <summary>
+            标签推送，如角色
+            </summary>
+        </member>
+        <member name="F:MF.JPush.PushType.Alias">
+            <summary>
+            别名推送，登录名
+            </summary>
+        </member>
+        <member name="F:MF.JPush.PushType.All">
+            <summary>
+            所有人
+            </summary>
+        </member>
+        <member name="P:MF.Security.PasswordComplexitySetting.MinLength">
+            <summary>
+            Minimum lenght of password
+            </summary>
+        </member>
+        <member name="P:MF.Security.PasswordComplexitySetting.MaxLength">
+            <summary>
+            Maximum lenght of password
+            </summary>
+        </member>
+        <member name="P:MF.Security.PasswordComplexitySetting.UseNumbers">
+            <summary>
+            Force using numbers in password
+            </summary>
+        </member>
+        <member name="P:MF.Security.PasswordComplexitySetting.UseUpperCaseLetters">
+            <summary>
+            Force using upper-case letters in password
+            </summary>
+        </member>
+        <member name="P:MF.Security.PasswordComplexitySetting.UseLowerCaseLetters">
+            <summary>
+            Force using lower case letters in password
+            </summary>
+        </member>
+        <member name="P:MF.Security.PasswordComplexitySetting.UsePunctuations">
+            <summary>
+            Force using punctuations in password
+            </summary>
+        </member>
+        <member name="M:MF.StringExtensions.ToStringList(System.String,System.Char[])">
+            <summary>
+            String转换为String List
+            </summary>
+        </member>
+        <member name="M:MF.StringExtensions.ToStringArray(System.String,System.Char[])">
+            <summary>
+            String转换为String Array
+            </summary>
+        </member>
+        <member name="M:MF.StringExtensions.ToSBC(System.String)">
+             转全角的函数(SBC case)
+             任意字符串 
+             全角字符串
+            全角空格为12288,半角空格为32 
+            其他字符半角(33-126)与全角(65281-65374)的对应关系是：均相差65248
+        </member>
+        <member name="M:MF.StringExtensions.ToDBC(System.Char)">
+             转半角的函数(DBC case)
+            任意字符串
+             半角字符串
+            全角空格为12288，半角空格为32
+            其他字符半角(33-126)与全角(65281-65374)的对应关系是：均相差65248 ///
+        </member>
+        <member name="M:MF.StringExtensions.ToDBC(System.String)">
+             转半角的函数(DBC case)
+            任意字符串
+             半角字符串
+            全角空格为12288，半角空格为32
+            其他字符半角(33-126)与全角(65281-65374)的对应关系是：均相差65248 ///
+        </member>
+        <member name="M:MF.StringExtensions.ToIntList(System.String,System.Char[])">
+            <summary>
+            String转换为Int List
+            </summary>
+        </member>
+        <member name="M:MF.StringExtensions.ToSBC(System.Char)">
+             转全角的函数(SBC case)
+             任意字符串 
+             全角字符串
+            全角空格为12288,半角空格为32 
+            其他字符半角(33-126)与全角(65281-65374)的对应关系是：均相差65248
+        </member>
+        <member name="M:MF.StringExtensions.IsPhoneNumber(System.String)">
+            <summary>
+            是否手机访问
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MF.Timing.AppTimes.StartupTime">
+            <summary>
+            Gets the startup time of the application.
+            </summary>
+        </member>
+        <member name="T:MF.Web.WebContentDirectoryFinder">
+            <summary>
+            This class is used to find root path of the web project in;
+            unit tests (to find views) and entity framework core command line commands (to find conn string).
+            </summary>
+        </member>
+    </members>
+</doc>

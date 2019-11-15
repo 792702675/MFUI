@@ -1,0 +1,47 @@
+
+.imgs{
+    position: absolute;
+    /* animation: mymove 2s, */
+}
+
+
+
+
+/* 人形 */
+.imgbox{
+    width:100%;
+    /* min-height:60%; */
+    position: relative;
+}
+.bejingimg{
+    width:100%;
+    /* position: absolute; */
+}
+.kuangimg{
+    width:50%;
+    position: absolute;
+    bottom:2px;
+    left:2px;
+    z-index: 5;
+}
+.zhuzhuangimg{
+    width:50%;
+    position: absolute;
+    bottom:2px;
+    left:2px;
+    z-index: 4;
+}
+.fuzhuangimg{
+    width:50%;
+    position: absolute;
+    bottom:2px;
+    left:2px;
+    z-index: 4;
+}
+.renimg{
+    width:50%;
+    position: absolute;
+    bottom:2px;
+    left:2px;
+    z-index: 3;
+}

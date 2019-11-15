@@ -1,0 +1,2975 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MF.Application</name>
+    </assembly>
+    <members>
+        <member name="F:MF.AppConsts.DefaultPassPhrase">
+            <summary>
+            Default pass phrase for SimpleStringCipher decrypt/encrypt operations
+            </summary>
+        </member>
+        <member name="F:MF.AppConsts.DefaultPageSize">
+            <summary>
+            Default page size for paged requests.
+            </summary>
+        </member>
+        <member name="F:MF.AppConsts.MaxPageSize">
+            <summary>
+            Maximum allowed page size for paged requests.
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.Dto.CheckUpdateOutput.IsMandatoryUpdate">
+            <summary>
+            是否强制更新
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.Dto.CheckUpdateOutput.Describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.Dto.CreateAppEditionInput.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.Dto.CreateAppEditionInput.AboutUrl">
+            <summary>
+            关于
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.Dto.CreateAppEditionInput.InstallationPackage">
+            <summary>
+            安装包
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.Dto.CreateAppEditionInput.IsMandatoryUpdate">
+            <summary>
+            是否强制更新
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.Dto.CreateAppEditionInput.IsActive">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.Dto.CreateAppEditionInput.Describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MF.AppEditions.Dto.CreateIOSAppEditionInput.ItunesUrl">
+            <summary>
+            Itunes连接
+            </summary>
+        </member>
+        <member name="M:MF.AppStartPages.AppStartPageAppService.GetAppStartPage(MF.AppStartPages.Dto.GetAppStartPageInput)">
+            <summary>
+            App端： 获取图片
+            </summary>
+        </member>
+        <member name="M:MF.AppStartPages.AppStartPageAppService.IsUpdated(MF.AppStartPages.Dto.IsUpatedInput)">
+            <summary>
+            App端： 检查图片是否有更新
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.Dto.CreateAppStartPageDto.Platform">
+            <summary>
+            平台 Android = 1, IOS = 2 
+            （创建默认值时，该项可空）
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.Dto.CreateAppStartPageDto.Width_Px">
+            <summary>
+            分辨率 宽
+            （创建默认值时，该项可空）
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.Dto.CreateAppStartPageDto.High_Px">
+            <summary>
+            分辨率 高
+            （创建默认值时，该项可空）
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.Dto.CreateAppStartPageDto.Url">
+            <summary>
+            图片路径
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.Dto.GetAppStartPageInput.Platform">
+            <summary>
+            平台 Android = 1, IOS = 2 
+            （创建默认值时，该项可空）
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.Dto.GetAppStartPageInput.Width_Px">
+            <summary>
+            分辨率 宽
+            （创建默认值时，该项可空）
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.Dto.GetAppStartPageInput.High_Px">
+            <summary>
+            分辨率 高
+            （创建默认值时，该项可空）
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.Dto.GetListAppStartPageDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.Dto.GetListAppStartPageDto._CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.Dto.GetListAppStartPageDto.LastModificationTime">
+            <summary>
+            最后一次修改时间
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.Dto.GetListAppStartPageDto._LastModificationTime">
+            <summary>
+            最后一次修改时间
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.Dto.GetListAppStartPageDto.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:MF.AppStartPages.Dto.IsUpatedInput.UpdateTime">
+            <summary>
+            本地图片的更新时间
+            </summary>
+        </member>
+        <member name="T:MF.AppStartPages.IAppStartPageAppService">
+            <summary>
+            AppStartPage
+            </summary>
+        </member>
+        <member name="M:MF.AppStartPages.IAppStartPageAppService.DeleteBatch(MF.CommonDto.ArrayDto{System.Int32})">
+            <summary>
+            批量删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.AppStartPages.IAppStartPageAppService.GetAppStartPage(MF.AppStartPages.Dto.GetAppStartPageInput)">
+            <summary>
+            App端： 获取图片
+            </summary>
+        </member>
+        <member name="M:MF.AppStartPages.IAppStartPageAppService.IsUpdated(MF.AppStartPages.Dto.IsUpatedInput)">
+            <summary>
+            App端： 检查图片是否有更新
+            </summary>
+        </member>
+        <member name="M:MF.AsyncMFCrudAppService`6.GetDropDownList``1(System.Linq.Expressions.Expression{System.Func{`0,Abp.Application.Services.Dto.NameValueDto{``0}}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
+            <summary>
+            获取下拉列表
+            </summary>
+        </member>
+        <member name="M:MF.AsyncMFCrudAppService`6.GetDropDownList``1(System.Linq.Expressions.Expression{System.Func{`0,Abp.Application.Services.Dto.NameValueDto{``0}}},System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.String)">
+            <summary>
+            获取下拉列表
+            </summary>
+        </member>
+        <member name="T:MF.Auditing.AuditLogAndUser">
+            <summary>
+            A helper class to store an <see cref="P:MF.Auditing.AuditLogAndUser.AuditLog"/> and a <see cref="P:MF.Auditing.AuditLogAndUser.User"/> object.
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.Accounts.AccountAppService.BindingThirdParty(MF.Authorization.Accounts.Dto.BindingThirdPartyInput)">
+            <inheritdoc />
+        </member>
+        <member name="M:MF.Authorization.Accounts.AccountAppService.SendPhoneNumberCode(MF.Users.Dto.PhoneWithCaptchaInput)">
+            <summary>
+            登录时发送手机证码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MF.Authorization.Accounts.Dto.BindingThirdPartyInput">
+            <summary>
+            绑定账号参数
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Accounts.Dto.BindingThirdPartyInput.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Accounts.Dto.BindingThirdPartyInput.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Accounts.Dto.BindingThirdPartyInput.Token">
+            <summary>
+            认证令牌
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.Accounts.IAccountAppService.BindingThirdParty(MF.Authorization.Accounts.Dto.BindingThirdPartyInput)">
+            <summary>
+            绑定账号
+            （无调用）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Accounts.IAccountAppService.SendPhoneNumberCode(MF.Users.Dto.PhoneWithCaptchaInput)">
+            <summary>
+            登录时发送手机证码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MF.Authorization.Actives.ActiveAppService">
+            <summary>
+            账号服务
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.Actives.ActiveAppService.#ctor(MF.Authorization.Users.UserRegistrationManager,MF.SMSs.ISMSManager,MF.Authorization.LogInManager,MF.Security.PasswordComplexityChecker,Abp.Runtime.Caching.ICacheManager,MF.Authorization.Users.UserManager,MF.Captcha.ICaptchaManager)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.Actives.ActiveAppService.SendConfirmEmailCode(MF.Authorization.Dto.SendConfirmEmailByCaptchaInput)">
+            <summary>
+            发送邮箱验证码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Actives.ActiveAppService.SendConfirmPhoneNumberByCode(MF.Users.Dto.VerificationCodeInput)">
+            <summary>
+            发送手机激活验证码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MF.Authorization.Actives.Dto.ConfirmEmailInput">
+            <summary>
+            邮箱地址验证
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Actives.Dto.ConfirmEmailInput.SecretKey">
+            <summary>
+            密钥
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.Actives.IActiveAppService">
+            <summary>
+            账号服务接口
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.Actives.IActiveAppService.SendConfirmEmailCode(MF.Authorization.Dto.SendConfirmEmailByCaptchaInput)">
+            <summary>
+            发送邮箱验证码
+            （sendemail）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Actives.IActiveAppService.SendConfirmPhoneNumberByCode(MF.Users.Dto.VerificationCodeInput)">
+            <summary>
+            发送手机激活验证码
+            （sendemail）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Actives.IActiveAppService.ConfirmEmailByCode(MF.Authorization.Dto.ConfirmEmailCodeInput)">
+            <summary>
+            验证邮箱验
+            （sendemail）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Actives.IActiveAppService.ConfirmPhoneNumberByCode(MF.Users.Dto.VerificationCodeInput)">
+            <summary>
+            验证手机号
+            （sendemail）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MF.Authorization.Dto.ConfirmEmailCodeInput">
+            <summary>
+            邮箱地址验证
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Dto.ConfirmEmailCodeInput.Code">
+            <summary>
+            密钥
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Dto.RegisterInput.Token">
+            <summary>
+            第三方登录令牌
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.Dto.SendConfirmEmailByCaptchaInput">
+            <summary>
+            发送激活账号邮件
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Dto.SendConfirmEmailByCaptchaInput.Captcha">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.Dto.SendConfirmEmailInput">
+            <summary>
+            发送激活账号邮件
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Dto.SendConfirmEmailInput.Email">
+            <summary>
+            邮箱地址
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.Permissions.Dto.FlatPermissionDto">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Permissions.Dto.FlatPermissionDto.ParentName">
+            <summary>
+            上级名称
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Permissions.Dto.FlatPermissionDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Permissions.Dto.FlatPermissionDto.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Permissions.Dto.FlatPermissionDto.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Permissions.Dto.FlatPermissionDto.IsGrantedByDefault">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.Permissions.Dto.PermissionViewDto">
+            <summary>
+            权值
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Permissions.Dto.PermissionViewDto.ParentName">
+            <summary>
+            上级名称
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Permissions.Dto.PermissionViewDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Permissions.Dto.PermissionViewDto.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Permissions.Dto.PermissionViewDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Permissions.Dto.PermissionViewDto.IsGrantedByDefault">
+            <summary>
+            默认授予权限
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Permissions.Dto.PermissionViewDto.Children">
+            <summary>
+            子权限
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.Permissions.Dto.PermissionViewDto.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.Permissions.IPermissionAppService">
+            <summary>
+            权限服务端接口
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.Permissions.IPermissionAppService.GetAllPermissions">
+            <summary>
+            获取所有权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Permissions.IPermissionAppService.GetAllPermissionTree">
+            <summary>
+            获取权限树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Permissions.IPermissionAppService.GetUserPermissions">
+            <summary>
+            获取登录用户所有权值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Permissions.PermissionAppService.GetAllPermissions">
+            <summary>
+            获取所有权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Permissions.PermissionAppService.GetAllPermissionTree">
+            <summary>
+            获取权限树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Permissions.PermissionAppService.GetUserPermissions">
+            <inheritdoc />
+        </member>
+        <member name="M:MF.Authorization.Permissions.PermissionManagerExtensions.GetPermissionsFromNamesByValidating(Abp.Authorization.IPermissionManager,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets all permissions by names.
+            Throws <see cref="T:Abp.Runtime.Validation.AbpValidationException"/> if can not find any of the permission names.
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.Registers.Dto.RegisterByEmailInput">
+            <summary>
+            邮箱注册
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.RegisterByEmailInput.UserName">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.RegisterByEmailInput.EmailAddress">
+            <summary>
+            邮箱地址
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.RegisterByEmailInput.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.RegisterByEmailInput.Token">
+            <summary>
+            第三方登录令牌
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.RegisterByEmailInput.Captcha">
+            <summary>
+             邮件验证码
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.Registers.Dto.RegisterByPhoneNumberInput">
+            <summary>
+            手机号注册
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.RegisterByPhoneNumberInput.UserName">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.RegisterByPhoneNumberInput.PhoneNumber">
+            <summary>
+            邮箱地址
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.RegisterByPhoneNumberInput.Captcha">
+            <summary>
+             短信验证码
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.RegisterByPhoneNumberInput.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.RegisterByPhoneNumberInput.Token">
+            <summary>
+            第三方登录令牌
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.Registers.Dto.RegisterOnlyPhoneNumberInput">
+            <summary>
+            手机号注册(只有手机号)
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.RegisterOnlyPhoneNumberInput.PhoneNumber">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.RegisterOnlyPhoneNumberInput.Captcha">
+            <summary>
+             短信验证码
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.RegisterOnlyPhoneNumberInput.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.Registers.Dto.ResetPasswordByEmailInput">
+            <summary>
+            通过邮箱找回
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.ResetPasswordByEmailInput.Password">
+            <summary>
+            新密码
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.Registers.Dto.VerificationResetPasswordByEmailInput">
+            <summary>
+            验证邮箱验证码是否正确
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.VerificationResetPasswordByEmailInput.Email">
+            <summary>
+            邮箱号
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.VerificationResetPasswordByEmailInput.VerificationCode">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.Registers.Dto.ResetPasswordByPhoneNumberInput">
+            <summary>
+            通过手机号找回密码
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.ResetPasswordByPhoneNumberInput.Password">
+            <summary>
+            新密码
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.ResetPasswordByPhoneNumberInput.PhoneNumber">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.Registers.Dto.ResetPasswordByPhoneNumberInput.Code">
+            <summary>
+            短信验证码
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.Registers.IRegisterAppService">
+            <summary>
+            账号服务接口
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.Registers.IRegisterAppService.Register(MF.Authorization.Dto.RegisterInput)">
+            <summary>
+            注册
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Registers.IRegisterAppService.RegisterByEmail(MF.Authorization.Registers.Dto.RegisterByEmailInput)">
+            <summary>
+            通过邮箱注册
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Registers.IRegisterAppService.RegisterByPhoneNumber(MF.Authorization.Registers.Dto.RegisterByPhoneNumberInput)">
+            <summary>
+            通过手机号注册
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Registers.IRegisterAppService.RegisterOnlyPhoneNumber(MF.Authorization.Registers.Dto.RegisterOnlyPhoneNumberInput)">
+            <summary>
+            通过手机号注册（只有手机号）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Registers.IRegisterAppService.SendEmailCode(MF.Authorization.Dto.SendConfirmEmailByCaptchaInput)">
+            <summary>
+            发送邮箱验证码   
+            (使用者：registerByEmail)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Registers.IRegisterAppService.SendPhoneNumberCode(MF.Users.Dto.PhoneWithCaptchaInput)">
+            <summary>
+            注册时发送手机证码  
+            （register）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MF.Authorization.Registers.RegisterAppService">
+            <summary>
+            账号服务
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.Registers.RegisterAppService.#ctor(MF.Authorization.Users.UserRegistrationManager,MF.SMSs.ISMSManager,MF.Authorization.LogInManager,MF.Security.PasswordComplexityChecker,Abp.Runtime.Caching.ICacheManager,MF.Authorization.Users.UserManager,MF.Captcha.ICaptchaManager)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.Registers.RegisterAppService.Register(MF.Authorization.Dto.RegisterInput)">
+            <summary>
+            注册
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Registers.RegisterAppService.SendEmailCode(MF.Authorization.Dto.SendConfirmEmailByCaptchaInput)">
+            <summary>
+            发送邮箱验证码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Registers.RegisterAppService.RegisterByEmail(MF.Authorization.Registers.Dto.RegisterByEmailInput)">
+            <summary>
+            通过邮箱注册
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Registers.RegisterAppService.SendPhoneNumberCode(MF.Users.Dto.PhoneWithCaptchaInput)">
+            <summary>
+            注册时发送手机证码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Registers.RegisterAppService.RegisterByPhoneNumber(MF.Authorization.Registers.Dto.RegisterByPhoneNumberInput)">
+            <summary>
+            通过手机号注册
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.Registers.RegisterAppService.RegisterOnlyPhoneNumber(MF.Authorization.Registers.Dto.RegisterOnlyPhoneNumberInput)">
+            <summary>
+            通过手机号注册（只有手机号）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MF.Authorization.RestPasswords.Dto.ResetPasswordByEmailInput">
+            <summary>
+            通过邮箱找回
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.RestPasswords.Dto.ResetPasswordByEmailInput.Password">
+            <summary>
+            新密码
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.RestPasswords.Dto.VerificationResetPasswordByEmailInput">
+            <summary>
+            验证邮箱验证码是否正确
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.RestPasswords.Dto.VerificationResetPasswordByEmailInput.Email">
+            <summary>
+            邮箱号
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.RestPasswords.Dto.VerificationResetPasswordByEmailInput.VerificationCode">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.RestPasswords.Dto.ResetPasswordByPhoneNumberInput">
+            <summary>
+            通过手机号找回密码
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.RestPasswords.Dto.ResetPasswordByPhoneNumberInput.Password">
+            <summary>
+            新密码
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.RestPasswords.Dto.ResetPasswordByPhoneNumberInput.PhoneNumber">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.RestPasswords.Dto.ResetPasswordByPhoneNumberInput.Code">
+            <summary>
+            短信验证码
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.RestPasswords.IRestPasswordAppService">
+            <summary>
+            重置 密码（找回密码）
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.RestPasswords.IRestPasswordAppService.SendEmailCode(MF.Authorization.Dto.SendConfirmEmailByCaptchaInput)">
+            <summary>
+            发送邮箱验证码   
+            (使用者：backknow)  
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.RestPasswords.IRestPasswordAppService.SendPhoneNumberCode(MF.Users.Dto.PhoneWithCaptchaInput)">
+            <summary>
+            注册时发送手机证码  
+            （callback）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.RestPasswords.IRestPasswordAppService.ResetPasswordByPhoneNumber(MF.Authorization.RestPasswords.Dto.ResetPasswordByPhoneNumberInput)">
+            <summary>
+            通过手机号找回密码
+            （callback）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.RestPasswords.IRestPasswordAppService.ResetPasswordByEmail(MF.Authorization.RestPasswords.Dto.ResetPasswordByEmailInput)">
+            <summary>
+            通过邮箱找回密码
+            （backknow）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MF.Authorization.RestPasswords.RestPasswordAppService">
+            <summary>
+            账号服务
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.RestPasswords.RestPasswordAppService.#ctor(MF.Authorization.Users.UserRegistrationManager,MF.SMSs.ISMSManager,MF.Authorization.LogInManager,MF.Security.PasswordComplexityChecker,Abp.Runtime.Caching.ICacheManager,MF.Authorization.Users.UserManager,MF.Captcha.ICaptchaManager)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.RestPasswords.RestPasswordAppService.SendEmailCode(MF.Authorization.Dto.SendConfirmEmailByCaptchaInput)">
+            <summary>
+            发送邮箱验证码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.RestPasswords.RestPasswordAppService.SendPhoneNumberCode(MF.Users.Dto.PhoneWithCaptchaInput)">
+            <summary>
+            注册时发送手机证码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.RestPasswords.RestPasswordAppService.ResetPasswordByPhoneNumber(MF.Authorization.RestPasswords.Dto.ResetPasswordByPhoneNumberInput)">
+            <summary>
+            通过手机重置密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.RestPasswords.RestPasswordAppService.ResetPasswordByEmail(MF.Authorization.RestPasswords.Dto.ResetPasswordByEmailInput)">
+            <summary>
+            通过邮箱重置密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MF.Authorization.ThirdParty.AlipayAuthService">
+            <summary>
+            支付宝第三方认证服务
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.AlipayAuthService.#ctor(Abp.Domain.Repositories.IRepository{MF.Authorization.ThirdParty.ThirdPartyUser,System.Int64})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="thirdPartyUserRepository"></param>
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.AlipayAuthService.GetAuthRedirectUrl">
+            <inheritdoc />
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.AlipayAuthService.Authorize(MF.Authorization.ThirdParty.Dto.AuthorizationInput)">
+            <inheritdoc />
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.AlipayAuthService.GetBindingRedirectUrl">
+            <inheritdoc />
+        </member>
+        <member name="T:MF.Authorization.ThirdParty.Dto.AuthorizationInput">
+            <summary>
+            第三方认证请求参数
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.ThirdParty.Dto.AuthorizationInput.Code">
+            <summary>
+            认证码
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.ThirdParty.Dto.ThirdPartyAuthorizeResult">
+            <summary>
+            第三方用户认证信息
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.ThirdParty.Dto.ThirdPartyAuthorizeResult.Success">
+            <summary>
+            是否登录成功
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.ThirdParty.Dto.ThirdPartyAuthorizeResult.RequireCreateNewUser">
+            <summary>
+            是否需要创建新用户
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.ThirdParty.Dto.ThirdPartyAuthorizeResult.Token">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.ThirdParty.Dto.ThirdPartyAuthorizeResult.ThirdPartyUser">
+            <summary>
+            第三方用户信息
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.ThirdParty.Dto.ThirdPartyUserOutput">
+            <summary>
+            第三方用户信息
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.ThirdParty.Dto.ThirdPartyUserOutput.UserId">
+            <summary>
+            关联用户ID
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.ThirdParty.Dto.ThirdPartyUserOutput.Name">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:MF.Authorization.ThirdParty.Dto.ThirdPartyUserOutput.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="T:MF.Authorization.ThirdParty.IThirdPartyAuthService">
+            <summary>
+            第三方服务
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.IThirdPartyAuthService.GetAuthRedirectUrl">
+            <summary>
+            获取跳转第三方登录链接地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.IThirdPartyAuthService.Authorize(MF.Authorization.ThirdParty.Dto.AuthorizationInput)">
+            <summary>
+            调用第三方认证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.IThirdPartyAuthService.GetBindingRedirectUrl">
+            <summary>
+            获取跳转第三方绑定链接地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MF.Authorization.ThirdParty.QQAuthService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.QQAuthService.#ctor(MF.Authorization.Users.UserManager,Abp.Domain.Repositories.IRepository{MF.Authorization.ThirdParty.ThirdPartyUser,System.Int64})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userManager"></param>
+            <param name="thirdPartyUserRepository"></param>
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.QQAuthService.GetAuthRedirectUrl">
+            <inheritdoc />
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.QQAuthService.Authorize(MF.Authorization.ThirdParty.Dto.AuthorizationInput)">
+            <inheritdoc />
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.QQAuthService.GetBindingRedirectUrl">
+            <inheritdoc />
+        </member>
+        <member name="T:MF.Authorization.ThirdParty.WeiboAuthService">
+            <summary>
+            微博登录服务
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.WeiboAuthService.#ctor(Abp.Domain.Repositories.IRepository{MF.Authorization.ThirdParty.ThirdPartyUser,System.Int64})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="thirdPartyUserRepository"></param>
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.WeiboAuthService.GetAuthRedirectUrl">
+            <inheritdoc />
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.WeiboAuthService.Authorize(MF.Authorization.ThirdParty.Dto.AuthorizationInput)">
+            <inheritdoc />
+        </member>
+        <member name="T:MF.Authorization.ThirdParty.WeixinAuthService">
+            <summary>
+            微信授权服务
+            </summary>
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.WeixinAuthService.#ctor(MF.Authorization.Users.UserManager,Abp.Domain.Repositories.IRepository{MF.Authorization.ThirdParty.ThirdPartyUser,System.Int64})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userManager"></param>
+            <param name="thirdPartyUserRepository"></param>
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.WeixinAuthService.GetAuthRedirectUrl">
+            <inheritdoc />
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.WeixinAuthService.Authorize(MF.Authorization.ThirdParty.Dto.AuthorizationInput)">
+            <inheritdoc />
+        </member>
+        <member name="M:MF.Authorization.ThirdParty.WeixinAuthService.GetBindingRedirectUrl">
+            <inheritdoc />
+        </member>
+        <member name="T:MF.CommonDto.ArrayDto`1">
+            <summary>
+            数组信息
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.ArrayDto`1.Value">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="T:MF.CommonDto.CascaderDto`1">
+            <summary>
+            级联选择 antd组件
+            </summary>
+        </member>
+        <member name="T:MF.CommonDto.FilteredInputDto">
+            <summary>
+            分页 排序 过滤 条件
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.FilteredInputDto.Filter">
+            <summary>
+            过滤条件
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.IFilteredResultRequest.Filter">
+            <summary>
+            过滤条件
+            </summary>
+        </member>
+        <member name="T:MF.CommonDto.ImportOutput">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.ImportOutput.TotalCount">
+            <summary>
+            数据总数
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.ImportOutput.SuccessCount">
+            <summary>
+            成功数量
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.ImportOutput.RepeatCount">
+            <summary>
+            成功数量
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.ImportOutput.FailureCount">
+            <summary>
+            失败数量
+            </summary>
+        </member>
+        <member name="T:MF.CommonDto.PagedAndFilteredInputDto">
+            <summary>
+            分页过滤条件
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.PagedAndFilteredInputDto.MaxResultCount">
+            <summary>
+            每页数量
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.PagedAndFilteredInputDto.SkipCount">
+            <summary>
+            跳过数量
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.PagedAndFilteredInputDto.Filter">
+            <summary>
+            过滤条件
+            </summary>
+        </member>
+        <member name="M:MF.CommonDto.PagedAndFilteredInputDto.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:MF.CommonDto.PagedAndSortedInputDto">
+            <summary>
+            分页 排序 条件
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.PagedAndSortedInputDto.Sorting">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="M:MF.CommonDto.PagedAndSortedInputDto.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:MF.CommonDto.PagedInputDto">
+            <summary>
+            分页 条件
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.PagedInputDto.MaxResultCount">
+            <summary>
+            每页数据条数
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.PagedInputDto.SkipCount">
+            <summary>
+            跳过数据条数
+            </summary>
+        </member>
+        <member name="M:MF.CommonDto.PagedInputDto.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:MF.CommonDto.PagedSortedAndFilteredInputDto">
+            <summary>
+            分页 排序 过滤 条件
+            </summary>
+        </member>
+        <member name="P:MF.CommonDto.PagedSortedAndFilteredInputDto.Filter">
+            <summary>
+            过滤条件
+            </summary>
+        </member>
+        <member name="P:MF.Configuration.Dto.ClientSettingDto.AllowSelfRegistration">
+            <summary>
+            允许用户注册
+            </summary>
+        </member>
+        <member name="P:MF.Configuration.Dto.ClientSettingDto.WeixinOpenIsEnabled">
+            <summary>
+            启用微信登录
+            </summary>
+        </member>
+        <member name="P:MF.Configuration.Dto.ClientSettingDto.AlipayIsEnabled">
+            <summary>
+            启用支付宝登录
+            </summary>
+        </member>
+        <member name="P:MF.Configuration.Dto.ClientSettingDto.QQIsEnabled">
+            <summary>
+            启用QQ登录
+            </summary>
+        </member>
+        <member name="P:MF.Configuration.Dto.ClientSettingDto.WeiboIsEnabled">
+            <summary>
+            启用微博登录
+            </summary>
+        </member>
+        <member name="P:MF.Configuration.Dto.ClientSettingDto.SystemName">
+            <summary>
+            系统名称
+            </summary>
+        </member>
+        <member name="P:MF.Configuration.Dto.SettingsEditOutput.Name">
+            <summary>
+            用于反射获取dto
+            </summary>
+        </member>
+        <member name="T:MF.Configuration.Dto.SiteUrlInput">
+            <summary>
+            站点地址
+            </summary>
+        </member>
+        <member name="P:MF.Configuration.Dto.SiteUrlInput.SiteUrl">
+            <summary>
+            站点地址
+            </summary>
+        </member>
+        <member name="M:MF.Configuration.IConfigurationAppService.ChangeUiTheme(MF.Configuration.Dto.ChangeUiThemeInput)">
+            <summary>
+            设置皮肤
+            </summary>
+        </member>
+        <member name="M:MF.Configuration.IConfigurationAppService.GetUiTheme">
+            <summary>
+            获取用户设置的皮肤
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Configuration.IConfigurationAppService.GetAllSettings">
+            <summary>
+            获取所有配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Configuration.IConfigurationAppService.UpdateAllSettings(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            更新所有配置
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:MF.Configuration.IConfigurationAppService.GetClientSetting">
+            <summary>
+            获取客户端设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Configuration.IConfigurationService`1.GetSetting">
+            <summary>
+            获取设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Configuration.IConfigurationService`1.SetSetting(`0)">
+            <summary>
+            应用设置
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="P:MF.Demos.Dto.CreateDemoDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.CreateDemoDto.LongText">
+            <summary>
+            介绍
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.CreateDemoDto.Group">
+            <summary>
+            组
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.CreateDemoDto.IsActivate">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.CreateDemoDto.Sort">
+            <summary>
+            顺序
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.CreateDemoDto.Weight">
+            <summary>
+            权
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.CreateDemoDto.PublishTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.CreateDemoDto.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.CreateDemoDto.Location">
+            <summary>
+            位置
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.GetDemoDto.PreviousAndNext">
+            <summary>
+            上一个 下一个
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.GetListDemoDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.GetListDemoDto._CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.GetListDemoDto.LastModificationTime">
+            <summary>
+            最后一次修改时间
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.GetListDemoDto._LastModificationTime">
+            <summary>
+            最后一次修改时间
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.SetFileSettingDemoDto.FileSize">
+            <summary>
+            文件大小限制
+            </summary>
+        </member>
+        <member name="P:MF.Demos.Dto.SetFileSettingDemoDto.FileExtension">
+            <summary>
+            文件格式限制
+            </summary>
+        </member>
+        <member name="T:MF.Demos.IDemoAppService">
+            <summary>
+            Demo
+            </summary>
+        </member>
+        <member name="T:MF.Demos.IFileSettingDemoAppService">
+            <summary>
+            FileSetting内容管理
+            </summary>
+        </member>
+        <member name="M:MF.Demos.IFileSettingDemoAppService.Get1">
+            <summary>
+            获取内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Demos.IFileSettingDemoAppService.Set(MF.Demos.Dto.SetFileSettingDemoDto)">
+            <summary>
+            修改内容
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.DragVerifications.DragVerificationAppService.CutImage(System.Drawing.Bitmap,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取裁剪的小图
+            </summary>
+            <param name="sFromBmp">原图</param>
+            <param name="cutWidth">剪切宽度</param>
+            <param name="cutHeight">剪切高度</param>
+            <param name="x">X轴剪切位置</param>
+            <param name="y">Y轴剪切位置</param>
+        </member>
+        <member name="M:MF.DragVerifications.DragVerificationAppService.GetNewBitMap(System.Drawing.Bitmap,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取裁剪小图后的原图
+            </summary>
+            <param name="sFromBmp">原图</param>
+            <param name="cutWidth">剪切宽度</param>
+            <param name="cutHeight">剪切高度</param>
+            <param name="spaceX">X轴剪切位置</param>
+            <param name="spaceY">Y轴剪切位置</param>
+        </member>
+        <member name="M:MF.DragVerifications.DragVerificationAppService.PTransparentAdjust(System.Drawing.Bitmap,System.Int32)">
+            <summary>
+            获取半透明图像
+            </summary>
+            <param name="bmp">Bitmap对象</param>
+            <param name="alpha">alpha分量。有效值为从 0 到 255。</param>
+        </member>
+        <member name="M:MF.DragVerifications.DragVerificationAppService.ConfusionImage(System.Int32[],System.Drawing.Bitmap)">
+            <summary>
+            获取混淆拼接的图片
+            </summary>
+        </member>
+        <member name="M:MF.DragVerifications.DragVerificationAppService.SlideFeature(System.String)">
+            <summary>
+            滑动特性
+            </summary>
+        </member>
+        <member name="M:MF.DragVerifications.DragVerificationAppService.GetTime(System.String)">
+            <summary>
+            时间戳转为C#格式时间
+            </summary>
+            <param name="timeStamp">Unix时间戳格式</param>
+            <returns>C#格式时间</returns>
+        </member>
+        <member name="P:MF.DragVerifications.Dto.CheckCodeInput.Point">
+            <summary>
+            完成时x轴对于左上角位置位置
+            </summary>
+        </member>
+        <member name="P:MF.DragVerifications.Dto.CheckCodeInput.DateList">
+            <summary>
+            滑动过程特征
+            </summary>
+        </member>
+        <member name="P:MF.DragVerifications.Dto.CheckCodeInput.Timespan">
+            <summary>
+            耗时
+            </summary>
+        </member>
+        <member name="P:MF.DragVerifications.Dto.DragVerificationDto.Y">
+            <summary>
+            裁剪图片y轴位置
+            </summary>
+        </member>
+        <member name="P:MF.DragVerifications.Dto.DragVerificationDto.Array">
+            <summary>
+            无序数组
+            </summary>
+        </member>
+        <member name="P:MF.DragVerifications.Dto.DragVerificationDto.ImgX">
+            <summary>
+            原图宽
+            </summary>
+        </member>
+        <member name="P:MF.DragVerifications.Dto.DragVerificationDto.ImgY">
+            <summary>
+            原图高
+            </summary>
+        </member>
+        <member name="P:MF.DragVerifications.Dto.DragVerificationDto.Small">
+            <summary>
+            小图字符串
+            </summary>
+        </member>
+        <member name="P:MF.DragVerifications.Dto.DragVerificationDto.Normal">
+            <summary>
+            原图高
+            </summary>
+        </member>
+        <member name="M:MF.DynamicQueryableExtensions.HasRecognizable(System.String)">
+            <summary>
+            是否是比较过滤
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.DynamicQueryableExtensions.Filter``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            动态过滤
+            </summary>
+        </member>
+        <member name="F:MF.DynamicQueryableExtensions.CompareSymbolFunction">
+            <summary>
+            比较符号
+            </summary>
+        </member>
+        <member name="F:MF.DynamicQueryableExtensions.CompareSymbol">
+            <summary>
+            比较符号
+            </summary>
+        </member>
+        <member name="F:MF.DynamicQueryableExtensions.ConnectionSymbol">
+            <summary>
+            连接符号
+            </summary>
+        </member>
+        <member name="T:MF.Enums.EnumAppService">
+            <summary>
+            枚举下拉选择
+            </summary>
+        </member>
+        <member name="T:MF.Enums.IEnumAppService">
+            <summary>
+            枚举下拉选择
+            </summary>
+        </member>
+        <member name="T:MF.InterfaceExport.IInterfaceExportAppService">
+            <summary>
+            接口导出
+            </summary>
+        </member>
+        <member name="M:MF.InterfaceExport.IInterfaceExportAppService.GetReactDownloadUrl">
+            <summary>
+            导出React使用的TypeScript文件
+            </summary>
+        </member>
+        <member name="T:MF.InterfaceExport.InterfaceExportAppService">
+            <summary>
+            接口导出实现
+            </summary>
+        </member>
+        <member name="M:MF.InterfaceExport.InterfaceExportAppService.GetReactDownloadUrl">
+            <inheritdoc />
+        </member>
+        <member name="T:MF.Menus.DBNavigationProvider">
+            <summary>
+            菜单导航管理
+            </summary>
+        </member>
+        <member name="F:MF.Menus.DBNavigationProvider.MenuGroupName">
+            <summary>
+            菜单组名称
+            </summary>
+        </member>
+        <member name="M:MF.Menus.DBNavigationProvider.SetNavigation(Abp.Application.Navigation.INavigationProviderContext)">
+            <summary>
+            构建导航菜单
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:MF.Menus.Dto.CreateMenuInput">
+            <summary>
+            创建菜单参数
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.CreateMenuInput.ParentId">
+            <summary>
+            上级菜单ID
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.CreateMenuInput.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.CreateMenuInput.Icon">
+            <summary>
+            图标名称
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.CreateMenuInput.Order">
+            <summary>
+            菜单顺序
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.CreateMenuInput.IsVisible">
+            <summary>
+            菜单是否可见
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.CreateMenuInput.RequiredPermissionName">
+            <summary>
+            权限限制
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.CreateMenuInput.Url">
+            <summary>
+            目标链接
+            </summary>
+        </member>
+        <member name="T:MF.Menus.Dto.DeleteMenuInput">
+            <summary>
+            删除菜单参数
+            </summary>
+        </member>
+        <member name="T:MF.Menus.Dto.MenuDto">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.ParentId">
+            <summary>
+            上级菜单
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.Icon">
+            <summary>
+            图标名称
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.IsLeaf">
+            <summary>
+            是否叶子节点
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.Order">
+            <summary>
+            菜单顺序
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.IsEnabled">
+            <summary>
+            菜单是否可用
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.IsVisible">
+            <summary>
+            菜单是否可见
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.RequiredPermissionName">
+            <summary>
+            权限限制
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.RequiresAuthentication">
+            <summary>
+            是否需要登录才可查看菜单
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.Target">
+            <summary>
+            打开方式 "_blank", "_self", "_parent", "_top"或者iframe名字
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.Url">
+            <summary>
+            目标链接
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.IsSystem">
+            <summary>
+            是否系统菜单
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MenuDto.Items">
+            <summary>
+            子菜单
+            </summary>
+        </member>
+        <member name="M:MF.Menus.Dto.MenuDto.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:MF.Menus.Dto.MoveMenuInput">
+            <summary>
+            移动菜单项
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MoveMenuInput.Id">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MoveMenuInput.NewParentId">
+            <summary>
+            新的上级菜单
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.MoveMenuInput.NewOrder">
+            <summary>
+            菜单新顺序
+            </summary>
+        </member>
+        <member name="T:MF.Menus.Dto.UpdateMenuInput">
+            <summary>
+            更新菜单信息
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.UpdateMenuInput.Id">
+            <summary>
+            菜单Id
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.UpdateMenuInput.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.UpdateMenuInput.Icon">
+            <summary>
+            图标class 
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.UpdateMenuInput.IsVisible">
+            <summary>
+            菜单是否可见
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.UpdateMenuInput.RequiredPermissionName">
+            <summary>
+            权限限制
+            </summary>
+        </member>
+        <member name="P:MF.Menus.Dto.UpdateMenuInput.Url">
+            <summary>
+            目标链接
+            </summary>
+        </member>
+        <member name="T:MF.Menus.IMenuAppService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MF.Menus.IMenuAppService.CreateCustomMenu(MF.Menus.Dto.CreateMenuInput)">
+            <summary>
+            创建用户自定义菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Menus.IMenuAppService.CreateSystemMenu(MF.Menus.Dto.CreateMenuInput)">
+            <summary>
+            创建系统菜单，开发人员使用
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Menus.IMenuAppService.UpdateMenu(MF.Menus.Dto.UpdateMenuInput)">
+            <summary>
+            更新菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Menus.IMenuAppService.MoveMenu(MF.Menus.Dto.MoveMenuInput)">
+            <summary>
+            移动菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Menus.IMenuAppService.DeleteMenu(MF.Menus.Dto.DeleteMenuInput)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Menus.IMenuAppService.GetUserMenus">
+            <summary>
+            获取菜单及权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Menus.IMenuAppService.GetAllMenus">
+            <summary>
+            获取菜单及权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MF.Menus.MenuAppService">
+            <summary>
+            菜单接口服务
+            </summary>
+        </member>
+        <member name="M:MF.Menus.MenuAppService.#ctor(Abp.Domain.Repositories.IRepository{MF.Menus.Menu},Abp.Application.Navigation.IUserNavigationManager)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MF.Menus.MenuAppService.CreateCustomMenu(MF.Menus.Dto.CreateMenuInput)">
+            <summary>
+            创建用户自定义菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Menus.MenuAppService.CreateSystemMenu(MF.Menus.Dto.CreateMenuInput)">
+            <summary>
+            创建系统菜单，开发人员使用
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Menus.MenuAppService.UpdateMenu(MF.Menus.Dto.UpdateMenuInput)">
+            <summary>
+            更新菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Menus.MenuAppService.MoveMenu(MF.Menus.Dto.MoveMenuInput)">
+            <summary>
+            移动菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Menus.MenuAppService.DeleteMenu(MF.Menus.Dto.DeleteMenuInput)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Menus.MenuAppService.GetUserMenus">
+            <summary>
+            获取菜单及权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Menus.MenuAppService.GetAllMenus">
+            <summary>
+            获取菜单及权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MF.MFApplicationModule">
+            <summary>
+            MFApplicationModule
+            </summary>
+        </member>
+        <member name="M:MF.MFApplicationModule.PreInitialize">
+            <summary>  /// </summary>
+        </member>
+        <member name="M:MF.MFApplicationModule.Initialize">
+            <summary>  /// </summary>
+        </member>
+        <member name="M:MF.MFApplicationModule.PostInitialize">
+            <summary>  /// </summary>
+        </member>
+        <member name="T:MF.MFAppServiceBase">
+            <summary>
+            Derive your application services from this class.
+            </summary>
+        </member>
+        <member name="T:MF.Net.MimeTypes.MimeTypeNames">
+            <summary>
+            Common mime types. 
+            </summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXJavascript">
+            <summary>Used to denote the encoding necessary for files containing JavaScript source code. The alternative MIME type for this file type is text/javascript.</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.AudioL24">
+            <summary>24bit Linear PCM audio at 8-48kHz, 1-N channels; Defined in RFC 3190</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXShockwaveFlash">
+            <summary>Adobe Flash files for example with the extension .swf</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationOctetStream">
+            <summary>Arbitrary binary data.[5] Generally speaking this type identifies files that are not associated with a specific application. Contrary to past assumptions by software packages such as Apache this is not a type that should be applied to unknown files. In such a case, a server or application should not indicate a content type, as it may be incorrect, but rather, should omit the type in order to allow the recipient to guess the type.[6]</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationAtomXml">
+            <summary>Atom feeds</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.TextCss">
+            <summary>Cascading Style Sheets; Defined in RFC 2318</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.TextCmd">
+            <summary>commands; subtype resident in Gecko browsers like Firefox 3.5</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.TextCsv">
+            <summary>Comma-separated values; Defined in RFC 4180</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXDeb">
+            <summary>deb (file format), a software package format used by the Debian project</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.MultipartEncrypted">
+            <summary>Defined in RFC 1847</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.MultipartSigned">
+            <summary>Defined in RFC 1847</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.MessageHttp">
+            <summary>Defined in RFC 2616</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ModelExample">
+            <summary>Defined in RFC 4735</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXDvi">
+            <summary>device-independent document in DVI format</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXmlDtd">
+            <summary>DTD files; Defined by RFC 3023</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationJavascript">
+            <summary>ECMAScript/JavaScript; Defined in RFC 4329 (equivalent to application/ecmascript but with looser processing rules) It is not accepted in IE 8 or earlier - text/javascript is accepted but it is defined as obsolete in RFC 4329. The "type" attribute of the script> tag in HTML5 is optional and in practice omitting the media type of JavaScript programs is the most interoperable solution since all browsers have always assumed the correct default even before HTML5.</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationEcmascript">
+            <summary>ECMAScript/JavaScript; Defined in RFC 4329 (equivalent to application/javascript but with stricter processing rules)</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationEdifact">
+            <summary>EDI EDIFACT data; Defined in RFC 1767</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationEdiX12">
+            <summary>EDI X12 data; Defined in RFC 1767</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.MessagePartial">
+            <summary>Email; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.MessageRfc822">
+            <summary>Email; EML files, MIME files, MHT files, MHTML files; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.TextXml">
+            <summary>Extensible Markup Language; Defined in RFC 3023</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.VideoXFlv">
+            <summary>Flash video (FLV files)</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ImageGif">
+            <summary>GIF image; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.TextXGwtRpc">
+            <summary>GoogleWebToolkit data</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXGzip">
+            <summary>Gzip</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.TextHtml">
+            <summary>HTML; Defined in RFC 2854</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ImageVndMicrosoftIcon">
+            <summary>ICO image; Registered[9]</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ModelIges">
+            <summary>IGS files, IGES files; Defined in RFC 2077</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.MessageImdnXml">
+            <summary>IMDN Instant Message Disposition Notification; Defined in RFC 5438</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationJson">
+            <summary>JavaScript Object Notation JSON; Defined in RFC 4627</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationJsonPatch">
+            <summary>JavaScript Object Notation (JSON) Patch; Defined in RFC 6902</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.TextJavascript">
+            <summary>JavaScript - Defined in and obsoleted by RFC 4329 in order to discourage its usage in favor of application/javascript. However,text/javascript is allowed in HTML 4 and 5 and, unlike application/javascript, has cross-browser support. The "type" attribute of the script> tag in HTML5 is optional and there is no need to use it at all since all browsers have always assumed the correct default (even in HTML 4 where it was required by the specification).</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ImagePjpeg">
+            <summary>JPEG JFIF image; Associated with Internet Explorer; Listed in ms775147(v=vs.85) - Progressive JPEG, initiated before global browser support for progressive JPEGs (Microsoft and Firefox).</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ImageJpeg">
+            <summary>JPEG JFIF image; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.TextXJqueryTmpl">
+            <summary>jQuery template data</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationVndGoogleEarthKmlXml">
+            <summary>KML files (e.g. for Google Earth)</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXLatex">
+            <summary>LaTeX files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.VideoXMatroska">
+            <summary>Matroska open media format</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet">
+            <summary>Microsoft Excel 2007 files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationVndMsExcel">
+            <summary>Microsoft Excel files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation">
+            <summary>Microsoft Powerpoint 2007 files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationVndMsPowerpoint">
+            <summary>Microsoft Powerpoint files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument">
+            <summary>Microsoft Word 2007 files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationMsword">
+            <summary>Microsoft Word files[15]</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.MultipartAlternative">
+            <summary>MIME Email; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.MultipartMixed">
+            <summary>MIME Email; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.MultipartRelated">
+            <summary>MIME Email; Defined in RFC 2387 and used by MHTML (HTML mail)</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.MultipartFormData">
+            <summary>MIME Webform; Defined in RFC 2388</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationVndMozillaXulXml">
+            <summary>Mozilla XUL files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.AudioMpeg">
+            <summary>MP3 or other MPEG audio; Defined in RFC 3003</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.AudioMp4">
+            <summary>MP4 audio</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.VideoMp4">
+            <summary>MP4 video; Defined in RFC 4337</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.VideoMpeg">
+            <summary>MPEG-1 video with multiplexed audio; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ModelMesh">
+            <summary>MSH files, MESH files; Defined in RFC 2077, SILO files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.AudioBasic">
+            <summary>mulaw audio at 8 kHz, 1 channel; Defined in RFC 2046</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.VideoOgg">
+            <summary>Ogg Theora or other video (with audio); Defined in RFC 5334</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.AudioOgg">
+            <summary>Ogg Vorbis, Speex, Flac and other audio; Defined in RFC 5334</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationOgg">
+            <summary>Ogg, a multimedia bitstream container format; Defined in RFC 5334</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXopXml">
+            <summary>OP</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationVndOasisOpendocumentGraphics">
+            <summary>OpenDocument Graphics; Registered[14]</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationVndOasisOpendocumentPresentation">
+            <summary>OpenDocument Presentation; Registered[13]</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationVndOasisOpendocumentSpreadsheet">
+            <summary>OpenDocument Spreadsheet; Registered[12]</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationVndOasisOpendocumentText">
+            <summary>OpenDocument Text; Registered[11]</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs12">
+            <summary>p12 files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs7Certificates">
+            <summary>p7b and spc files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs7Mime">
+            <summary>p7c files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs7Certreqresp">
+            <summary>p7r files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs7Signature">
+            <summary>p7s files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationPdf">
+            <summary>Portable Document Format, PDF has been in use for document exchange on the Internet since 1993; Defined in RFC 3778</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ImagePng">
+            <summary>Portable Network Graphics; Registered,[8] Defined in RFC 2083</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationPostscript">
+            <summary>PostScript; Defined in RFC 2046</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.VideoQuicktime">
+            <summary>QuickTime video; Registered[10]</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXRarCompressed">
+            <summary>RAR archive files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.AudioVndRnRealaudio">
+            <summary>RealAudio; Documented in RealPlayer Customer Support Answer 2559</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationRdfXml">
+            <summary>Resource Description Framework; Defined by RFC 3870</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationRssXml">
+            <summary>RSS feeds</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationSoapXml">
+            <summary>SOAP; Defined by RFC 3902</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXStuffit">
+            <summary>StuffIt archive files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ImageSvgXml">
+            <summary>SVG vector image; Defined in SVG Tiny 1.2 Specification Appendix M</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ImageTiff">
+            <summary>Tag Image File Format (only for Baseline TIFF); Defined in RFC 3302</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXTar">
+            <summary>Tarball files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.TextPlain">
+            <summary>Textual data; Defined in RFC 2046 and RFC 3676</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXFontTtf">
+            <summary>TrueType Font No registered MIME type, but this is the most commonly used</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.TextVcard">
+            <summary>vCard (contact information); Defined in RFC 6350</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.AudioVorbis">
+            <summary>Vorbis encoded audio; Defined in RFC 5215</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.AudioVndWave">
+            <summary>WAV audio; Defined in RFC 2361</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationFontWoff">
+            <summary>Web Open Font Format; (candidate recommendation; use application/x-font-woff until standard is official)</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.VideoWebm">
+            <summary>WebM Matroska-based open media format</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.AudioWebm">
+            <summary>WebM open media format</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.AudioXMsWax">
+            <summary>Windows Media Audio Redirector; Documented in Microsoft help page</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.AudioXMsWma">
+            <summary>Windows Media Audio; Documented in Microsoft KB 288102</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.VideoXMsWmv">
+            <summary>Windows Media Video; Documented in Microsoft KB 288102</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ModelVrml">
+            <summary>WRL files, VRML files; Defined in RFC 2077</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ModelX3DXml">
+            <summary>X3D ISO standard for representing 3D computer graphics, X3D XML files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ModelX3DBinary">
+            <summary>X3D ISO standard for representing 3D computer graphics, X3DB binary files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ModelX3DVrml">
+            <summary>X3D ISO standard for representing 3D computer graphics, X3DV VRML files</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationXhtmlXml">
+            <summary>XHTML; Defined by RFC 3236</summary>
+        </member>
+        <member name="F:MF.Net.MimeTypes.MimeTypeNames.ApplicationZip">
+            <summary>ZIP archive files; Registered[7]</summary>
+        </member>
+        <member name="T:MF.OrganizationUnits.Dto.CreateOrganizationUnitInput">
+            <summary>
+            创建组织机构参数
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.CreateOrganizationUnitInput.ParentId">
+            <summary>
+            上级机构ID
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.CreateOrganizationUnitInput.DisplayName">
+            <summary>
+            机构名称
+            </summary>
+        </member>
+        <member name="T:MF.OrganizationUnits.Dto.GetOrganizationUnitJoinableUserListInput">
+            <summary>
+            获取可加入某组织机构的人员请求
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.GetOrganizationUnitJoinableUserListInput.Id">
+            <summary>
+            组织机构Id
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.GetOrganizationUnitJoinableUserListInput.Filter">
+            <summary>
+            按名称过滤
+            </summary>
+        </member>
+        <member name="T:MF.OrganizationUnits.Dto.GetOrganizationUnitUsersInput">
+            <summary>
+            获取组织下人员信息请求
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.GetOrganizationUnitUsersInput.Id">
+            <summary>
+            机构ID
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.GetOrganizationUnitUsersInput.IsRecursiveSearch">
+            <summary>
+            是否递归查找下级机构数据
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.GetOrganizationUnitUsersInput.NameFilter">
+            <summary>
+            用户名称过滤条件
+            </summary>
+        </member>
+        <member name="M:MF.OrganizationUnits.Dto.GetOrganizationUnitUsersInput.Normalize">
+            <summary>
+            排序条件
+            </summary>
+        </member>
+        <member name="T:MF.OrganizationUnits.Dto.MoveOrganizationUnitInput">
+            <summary>
+            移动组织机构请求
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.MoveOrganizationUnitInput.Id">
+            <summary>
+            组织机构ID
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.MoveOrganizationUnitInput.NewParentId">
+            <summary>
+            新的上级组织机构ID
+            </summary>
+        </member>
+        <member name="T:MF.OrganizationUnits.Dto.OrganizationUnitDto">
+            <summary>
+            组织机构信息
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitDto.ParentId">
+            <summary>
+            上级机构ID
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitDto.Code">
+            <summary>
+            机构Code
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitDto.DisplayName">
+            <summary>
+            机构名称
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitDto.MemberCount">
+            <summary>
+            组织机构人员数量
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitDto.Children">
+            <summary>
+            下级组织机构
+            </summary>
+        </member>
+        <member name="M:MF.OrganizationUnits.Dto.OrganizationUnitDto.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:MF.OrganizationUnits.Dto.OrganizationUnitUserDto">
+            <summary>
+            归属于组织单元的人员信息
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitUserDto.Id">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitUserDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitUserDto.Name">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitUserDto.PhoneNumber">
+            <summary>
+            用户手机号
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitUserDto.CreationTime">
+            <summary>
+            用户创建时间
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitUserDto.EmailAddress">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="T:MF.OrganizationUnits.Dto.OrganizationUnitUserListDto">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitUserListDto.Name">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitUserListDto.Surname">
+            <summary>
+             显示名称
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitUserListDto.UserName">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitUserListDto.EmailAddress">
+            <summary>
+            邮件地址
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitUserListDto.ProfilePictureId">
+            <summary>
+            头像ID
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitUserListDto.AddedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.OrganizationUnitUserListDto.PhoneNumber">
+            <summary>
+            用户手机号
+            </summary>
+        </member>
+        <member name="T:MF.OrganizationUnits.Dto.UpdateOrganizationUnitInput">
+            <summary>
+            更新组织机构信息请求
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.UpdateOrganizationUnitInput.Id">
+            <summary>
+            组织机构ID
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.UpdateOrganizationUnitInput.DisplayName">
+            <summary>
+            组织机构名称
+            </summary>
+        </member>
+        <member name="T:MF.OrganizationUnits.Dto.UserIdInput">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.UserIdInput.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="T:MF.OrganizationUnits.Dto.UsersToOrganizationUnitInput">
+            <summary>
+            用户加入组织请求
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.UsersToOrganizationUnitInput.UserIdListStr">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.UsersToOrganizationUnitInput.OrganizationUnitId">
+            <summary>
+            组织机构ID
+            </summary>
+        </member>
+        <member name="T:MF.OrganizationUnits.Dto.UserToOrganizationUnitInput">
+            <summary>
+            用户加入组织请求
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.UserToOrganizationUnitInput.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:MF.OrganizationUnits.Dto.UserToOrganizationUnitInput.OrganizationUnitId">
+            <summary>
+            组织机构ID
+            </summary>
+        </member>
+        <member name="T:MF.OrganizationUnits.IOrganizationUnitAppService">
+            <summary>
+            组织单元管理
+            </summary>
+        </member>
+        <member name="M:MF.OrganizationUnits.IOrganizationUnitAppService.GetOrganizationUnits">
+            <summary>
+            获取组织机构树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.IOrganizationUnitAppService.CreateOrganizationUnit(MF.OrganizationUnits.Dto.CreateOrganizationUnitInput)">
+            <summary>
+            创建组织机构
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:MF.OrganizationUnits.IOrganizationUnitAppService.UpdateOrganizationUnit(MF.OrganizationUnits.Dto.UpdateOrganizationUnitInput)">
+            <summary>
+            修改组织机构信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.IOrganizationUnitAppService.MoveOrganizationUnit(MF.OrganizationUnits.Dto.MoveOrganizationUnitInput)">
+            <summary>
+            移动组织机构
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.IOrganizationUnitAppService.DeleteOrganizationUnit(Abp.Application.Services.Dto.EntityDto{System.Int64})">
+            <summary>
+            删除组织机构
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.IOrganizationUnitAppService.GetOrganizationUnitUsers(MF.OrganizationUnits.Dto.GetOrganizationUnitUsersInput)">
+            <summary>
+            获取组织机构下的所有人员
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.IOrganizationUnitAppService.GetOrganizationUnitJoinableUserList(MF.OrganizationUnits.Dto.GetOrganizationUnitJoinableUserListInput)">
+            <summary>
+            获取可加入某组织单元的所有人员
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.IOrganizationUnitAppService.AddUserToOrganizationUnit(MF.OrganizationUnits.Dto.UsersToOrganizationUnitInput)">
+            <summary>
+            将用户添加到组织机构中
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.IOrganizationUnitAppService.RemoveUserFromOrganizationUnit(MF.OrganizationUnits.Dto.UsersToOrganizationUnitInput)">
+            <summary>
+            从组织机构中移除用户
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.IOrganizationUnitAppService.IsInOrganizationUnit(MF.OrganizationUnits.Dto.UserToOrganizationUnitInput)">
+            <summary>
+            用户是否属于组织机构
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.IOrganizationUnitAppService.GetUserOrganizationUnits(MF.OrganizationUnits.Dto.UserIdInput)">
+            <summary>
+            获取用户所在组织机构
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.IOrganizationUnitAppService.RemoveAllOrganizationUnit(System.Int64)">
+            <summary>
+            移除用户的全部组织机构
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MF.OrganizationUnits.OrganizationUnitAppService">
+            <summary>
+            组织机构管理
+            </summary>
+        </member>
+        <member name="M:MF.OrganizationUnits.OrganizationUnitAppService.#ctor(Abp.Organizations.OrganizationUnitManager,Abp.Domain.Repositories.IRepository{Abp.Organizations.OrganizationUnit,System.Int64},Abp.Domain.Repositories.IRepository{Abp.Authorization.Users.UserOrganizationUnit,System.Int64},Abp.Domain.Repositories.IRepository{MF.Authorization.Users.User,System.Int64})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="organizationUnitManager"></param>
+            <param name="organizationUnitRepository"></param>
+            <param name="userOrganizationUnitRepository"></param>
+            <param name="userRepository"></param>
+        </member>
+        <member name="M:MF.OrganizationUnits.OrganizationUnitAppService.GetOrganizationUnits">
+            <summary>
+            获取组织机构树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.OrganizationUnitAppService.CreateOrganizationUnit(MF.OrganizationUnits.Dto.CreateOrganizationUnitInput)">
+            <summary>
+            创建组织机构
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:MF.OrganizationUnits.OrganizationUnitAppService.UpdateOrganizationUnit(MF.OrganizationUnits.Dto.UpdateOrganizationUnitInput)">
+            <summary>
+            修改组织机构信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.OrganizationUnitAppService.MoveOrganizationUnit(MF.OrganizationUnits.Dto.MoveOrganizationUnitInput)">
+            <summary>
+            移动组织机构
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.OrganizationUnitAppService.DeleteOrganizationUnit(Abp.Application.Services.Dto.EntityDto{System.Int64})">
+            <summary>
+            删除组织机构
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.OrganizationUnitAppService.GetOrganizationUnitUsers(MF.OrganizationUnits.Dto.GetOrganizationUnitUsersInput)">
+            <summary>
+            获取组织机构下的所有人员
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.OrganizationUnitAppService.GetOrganizationUnitJoinableUserList(MF.OrganizationUnits.Dto.GetOrganizationUnitJoinableUserListInput)">
+            <summary>
+            获取可加入某组织单元的所有人员
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.OrganizationUnitAppService.AddUserToOrganizationUnit(MF.OrganizationUnits.Dto.UsersToOrganizationUnitInput)">
+            <summary>
+            将用户添加到组织机构中
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.OrganizationUnitAppService.RemoveUserFromOrganizationUnit(MF.OrganizationUnits.Dto.UsersToOrganizationUnitInput)">
+            <summary>
+            从组织机构中移除用户
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.OrganizationUnitAppService.IsInOrganizationUnit(MF.OrganizationUnits.Dto.UserToOrganizationUnitInput)">
+            <summary>
+            用户是否属于组织机构
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.OrganizationUnits.OrganizationUnitAppService.GetUserOrganizationUnits(MF.OrganizationUnits.Dto.UserIdInput)">
+            <summary>
+            获取用户所在组织机构
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MF.OSSObjects.Dto.GetAllInput.BucketName">
+            <summary>
+            库名
+            </summary>
+        </member>
+        <member name="P:MF.OSSObjects.Dto.GetAllInput.Name">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:MF.OSSObjects.Dto.GetAllInput.TagNames">
+            <summary>
+            标签名
+            </summary>
+        </member>
+        <member name="P:MF.OSSObjects.Dto.GetAllInput.ExtensionNames">
+            <summary>
+            扩展名
+            </summary>
+        </member>
+        <member name="P:MF.OSSObjects.Dto.GetAllInput.SysFunName">
+            <summary>
+            系统功能
+            </summary>
+        </member>
+        <member name="T:MF.OSSObjects.IOSSObjectAppService">
+            <summary>
+            OSSObject
+            </summary>
+        </member>
+        <member name="M:MF.OSSObjects.IOSSObjectAppService.GetAll(MF.OSSObjects.Dto.GetAllInput)">
+            <summary>
+            文件查询
+            </summary>
+        </member>
+        <member name="P:MF.SysFuns.Dto.GetListSysFunDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MF.SysFuns.Dto.GetListSysFunDto._CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MF.SysFuns.Dto.GetListSysFunDto.LastModificationTime">
+            <summary>
+            最后一次修改时间
+            </summary>
+        </member>
+        <member name="P:MF.SysFuns.Dto.GetListSysFunDto._LastModificationTime">
+            <summary>
+            最后一次修改时间
+            </summary>
+        </member>
+        <member name="T:MF.SysFuns.ISysFunAppService">
+            <summary>
+            SysFun
+            </summary>
+        </member>
+        <member name="M:MF.SysFuns.ISysFunAppService.UpdateTag(MF.SysFuns.UpdateTagInput)">
+            <summary>
+            更新标签
+            </summary>
+        </member>
+        <member name="M:MF.SysFuns.SysFunAppService.UpdateTag(MF.SysFuns.UpdateTagInput)">
+            <summary>
+            更新标签
+            </summary>
+        </member>
+        <member name="T:MF.Tags.ITagAppService">
+            <summary>
+            Tag
+            </summary>
+        </member>
+        <member name="M:MF.Tags.ITagAppService.GetAll">
+            <summary>
+            获取全部的Tag
+            </summary>
+        </member>
+        <member name="M:MF.Tags.ITagAppService.GetAllSystemTag">
+            <summary>
+            获取全部的系统Tag
+            </summary>
+        </member>
+        <member name="M:MF.Tags.ITagAppService.GetAllNotSystemTag">
+            <summary>
+            获取全部的非系统Tag
+            </summary>
+        </member>
+        <member name="M:MF.Tags.TagAppService.GetAll">
+            <summary>
+            获取全部的Tag
+            </summary>
+        </member>
+        <member name="M:MF.Tags.TagAppService.GetAllSystemTag">
+            <summary>
+            获取全部的系统Tag
+            </summary>
+        </member>
+        <member name="M:MF.Tags.TagAppService.GetAllNotSystemTag">
+            <summary>
+            获取全部的非系统Tag
+            </summary>
+        </member>
+        <member name="T:MF.Users.Dto.BatchActiveUserInput">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.BatchActiveUserInput.Ids">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.BatchActiveUserInput.IsActive">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:MF.Users.Dto.CreateOrUpdateUserInput">
+            <summary>
+            创建或编辑用户 参数
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.CreateOrUpdateUserInput.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.CreateOrUpdateUserInput.AssignedRoleNames">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.CreateOrUpdateUserInput.SendActivationMessage">
+            <summary>
+            是否需要发送通知短信
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.CreateOrUpdateUserInput.SendActivationEmail">
+            <summary>
+            是否需要发送激活邮件
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.CreateOrUpdateUserInput.SetRandomPassword">
+            <summary>
+            是否使用随机密码
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.CreateOrUpdateUserInput.Organizations">
+            <summary>
+            组织机构信息
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.CreateUserDto.PhoneNumber">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.CreateUserDto.SendActivationMessage">
+            <summary>
+            是否需要发送通知短信
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.CreateUserDto.SendActivationEmail">
+            <summary>
+            是否需要发送激活邮件
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.CreateUserDto.SetRandomPassword">
+            <summary>
+            是否使用随机密码
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.CreateUserDto.Organizations">
+            <summary>
+            组织机构信息
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.CreateUserDto.ShouldChangePasswordOnNextLogin">
+            <summary>
+            下次登录需要修改密码
+            </summary>
+        </member>
+        <member name="T:MF.Users.Dto.GetUserForEditOutput">
+            <summary>
+            获取编辑用户信息
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.GetUserForEditOutput.ProfilePictureId">
+            <summary>
+            头像ID
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.GetUserForEditOutput.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.GetUserForEditOutput.Roles">
+            <summary>
+            角色信息
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.GetUserForEditOutput.OrganizationIds">
+            <summary>
+            组织机构信息
+            </summary>
+        </member>
+        <member name="M:MF.Users.Dto.GetUserForEditOutput.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:MF.Users.Dto.GetUserPermissionsForEditOutput">
+            <summary>
+            用户权值
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.GetUserPermissionsForEditOutput.Permissions">
+            <summary>
+            权值
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.GetUserPermissionsForEditOutput.GrantedPermissionNames">
+            <summary>
+            已授予的权值
+            </summary>
+        </member>
+        <member name="T:MF.Users.Dto.GetUsersInput">
+            <summary>
+            获取用户列表参数
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.GetUsersInput.Filter">
+            <summary>
+            模糊匹配  Name、Surname、UserName、EmailAddress
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.GetUsersInput.Permission">
+            <summary>
+            拥有此权限的用户
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.GetUsersInput.Role">
+            <summary>
+            拥有此角色的用户
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.GetUsersInput.Name">
+            <summary>
+            姓名      
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.GetUsersInput.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.GetUsersInput.PhoneNumber">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="T:MF.Users.Dto.PhoneWithCaptchaInput">
+            <summary>
+            发送短信前需验证验证码
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.PhoneWithCaptchaInput.PhoneNumber">
+            <summary>
+            电话号码
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.PhoneWithCaptchaInput.Captcha">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UpdateCurrentUserInput.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UpdateCurrentUserInput.Surname">
+            <summary>
+            姓氏    【可不使用】
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UpdateCurrentUserInput.EmailAddress">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UpdateCurrentUserInput.PhoneNumber">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="T:MF.Users.Dto.UpdateUserPermissionsInput">
+            <summary>
+            修改用户权限参数
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UpdateUserPermissionsInput.GrantedPermissionNames">
+            <summary>
+            权限集合
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserDto.Organizations">
+            <summary>
+            组织机构信息
+            </summary>
+        </member>
+        <member name="T:MF.Users.Dto.UserEditDto">
+            <summary>
+            编辑用户
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserEditDto.Id">
+            <summary>
+            Set null to create a new user. Set user's Id to update a user
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserEditDto.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserEditDto.Surname">
+            <summary>
+            姓氏    【可不使用】
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserEditDto.UserName">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserEditDto.EmailAddress">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserEditDto.PhoneNumber">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserEditDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserEditDto.IsActive">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserEditDto.ShouldChangePasswordOnNextLogin">
+            <summary>
+            下次登录需要修改密码
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserEditDto.IsLockoutEnabled">
+            <summary>
+            是否启用锁定
+            </summary>
+        </member>
+        <member name="T:MF.Users.Dto.UserListDto">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.Name">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.Surname">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.EmailAddress">
+            <summary>
+            邮件地址
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.PhoneNumber">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.ProfilePictureId">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.IsEmailConfirmed">
+            <summary>
+            邮箱地址是否已验证
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto._IsEmailConfirmed">
+            <summary>
+            邮箱地址是否已验证
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.IsPhoneNumberConfirmed">
+            <summary>
+            手机号码是否已验证
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto._IsPhoneNumberConfirmed">
+            <summary>
+            手机号码是否已验证
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.Roles">
+            <summary>
+            角色列表
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto._Roles">
+            <summary>
+            角色列表
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.LastLoginTime">
+            <summary>
+            上次登录时间
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.IsActive">
+            <inheritdoc />
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto._IsActive">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:MF.Users.Dto.UserListDto.UserListRoleDto">
+            <summary>
+            角色信息
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.IsLocked">
+            <summary>
+            是否被锁定
+            </summary>
+        </member>
+        <member name="P:MF.Users.Dto.UserListDto.LockoutEndDateUtc">
+            <summary>
+            锁定超时时间
+            </summary>
+        </member>
+        <member name="T:MF.Users.IUserLoginAppService">
+            <summary>
+            登录历史
+            </summary>
+        </member>
+        <member name="M:MF.Users.IUserLoginAppService.GetRecentUserLoginAttempts(MF.Users.Dto.GetUserLoginsInput)">
+            <summary>
+            获取登录历史
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Users.Profile.IProfileAppService.GetCurrentUserProfileForEdit">
+            <summary>
+            编辑前，获取用户的基本信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Users.Profile.IProfileAppService.UpdateCurrentUserProfile(MF.Users.Profile.Dto.CurrentUserProfileEditDto)">
+            <summary>
+            编辑用户的基本信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Users.Profile.IProfileAppService.ChangePassword(MF.Users.Profile.Dto.ChangePasswordInput)">
+            <summary>
+            修改自己的密码 
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Users.Profile.IProfileAppService.ChangeUserPassword(MF.Users.Profile.Dto.ChangeUserPasswordInput)">
+            <summary>
+            管理员修改别人的密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Users.Profile.IProfileAppService.ResetUserPassword(Abp.Application.Services.Dto.EntityDto{System.Int64})">
+            <summary>
+            管理员重置别人的密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Users.Profile.IProfileAppService.UpdateProfilePicture(MF.Users.Profile.Dto.UpdateProfilePictureInput)">
+            <summary>
+            修改头像
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MF.Users.Profile.IProfileAppService.GetPasswordComplexitySetting">
+            <summary>
+            获取密码复杂性设置
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

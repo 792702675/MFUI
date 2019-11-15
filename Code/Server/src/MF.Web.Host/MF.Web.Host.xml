@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MF.Web.Host</name>
+    </assembly>
+    <members>
+        <member name="T:MF.Controllers.ProfileController">
+            <summary>  /// </summary>
+        </member>
+        <member name="M:MF.Controllers.ProfileController.#ctor(MF.Authorization.Users.UserManager,MF.Storage.IBinaryObjectManager,MF.IAppFolders)">
+            <summary>  /// </summary>
+        </member>
+        <member name="M:MF.Controllers.ProfileController.GetProfilePicture">
+            <summary>  /// </summary>
+        </member>
+        <member name="M:MF.Controllers.ProfileController.GetProfilePictureById(System.String)">
+            <summary>  /// </summary>
+        </member>
+        <member name="M:MF.Controllers.ProfileController.ChangeProfilePicture">
+            <summary>  /// </summary>
+        </member>
+        <member name="M:MF.Controllers.ProfileController.UploadProfilePicture">
+            <summary>  /// </summary>
+        </member>
+        <member name="M:MF.Controllers.ProfileController.GetHvtThumbnail(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary> 
+            为图片生成缩略图 
+            </summary> 
+            <param name="image">原图片</param> 
+            <param name="width">缩略图宽</param> 
+            <param name="height">缩略图高</param> 
+            <returns></returns> 
+        </member>
+    </members>
+</doc>

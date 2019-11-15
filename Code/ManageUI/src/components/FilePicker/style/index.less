@@ -1,0 +1,113 @@
+:global {
+	/* 选择图片组件 */
+	.hermes-photo-picker-header {
+		margin-bottom: 15px;
+		overflow: hidden;
+	}
+	div.hermes-photo-picker-list {
+		border: 1px;
+		height: 282px;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+			width: 5px;
+			background-color: #fbfbfb;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: #c1c1c1;
+			border-radius: 3px;
+		}
+	}
+	.hermes-photo-picker-list-item {
+		position: relative;
+		display: inline-block;
+		border: 1px;
+		width: 92px;
+		height: 92px;
+		// background-color: #1a1a1a;
+		line-height: 90px;
+		text-align: center;
+		margin: 0 2px;
+		img {
+			max-height: 90px;
+			max-width: 90px;
+			margin-bottom: 3px;
+			vertical-align: middle;
+		}
+	}
+	.hermes-photo-picker-list-item-fileName {
+		position: absolute;
+		top: 74px;
+		line-height: 18px;
+		left: 0;
+		right: 0;
+		background-color: #666;
+		color: #ffffff;
+		overflow: hidden;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 90px;
+		z-index: 999;
+	}
+	.hermes-photo-picker-list-item-filesize {
+		position: absolute;
+		top: 91px;
+		line-height: 18px;
+		left: 0;
+		right: 0;
+		background-color: #666;
+		color: #ffffff;
+		overflow: hidden;
+		display: none;
+		width: 90px;
+		z-index: 999;
+	}
+	.hermes-photo-picker-list-item:hover .hermes-photo-picker-list-item-filesize {
+		display: block;
+	}
+	div.hermes-photo-picker-pagination-list {
+		padding-bottom: 0;
+		height: 282px;
+	}
+	.hermes-photo-picker-list-item-icon {
+		position: absolute;
+		right: 5px;
+		bottom: 5px;
+		color: #87d068;
+		line-height: 14px;
+		font-size: 14px;
+		z-index: 1000;
+		background-color: #fff;
+		padding: 1px;
+		border-radius: 100%;
+	}
+	.hermes-photo-picker-upload {
+		float: right;
+		margin-right: 12px;
+		.ant-upload-list {
+			display: none;
+		}
+	}
+	div.hermes-photo-picker-footer {
+		margin: 15px 0;
+		text-align: right;
+		.hermes-photo-picker-pagination {
+			text-align: right;
+			margin-bottom: 8px;
+			.ant-pagination {
+				display: inline-block;
+			}
+		}
+		.notice-info {
+			margin-bottom: 10px;
+			color: #999;
+		}
+	}
+	.ant-upload-list-picture-card-readonly.ant-upload-list-picture-card .ant-upload-list-item-info:before {
+		display: none;
+	}
+
+	.hermes-checkbox-button-group .ant-btn {
+		padding: 4px 8px;
+	}
+}
